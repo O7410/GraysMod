@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "s": {
+      "item": "graysmod:strider_scale"
+    }
+  },
+  "pattern": [
+    "s s",
+    "s s"
+  ],
+  "result": {
+    "count": 1,
+    "id": "graysmod:strider_boots"
+  }
+}

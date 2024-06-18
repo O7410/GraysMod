@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_strider_scale": {
+      "conditions": {
+        "items": [
+          {
+            "items": "graysmod:strider_scale"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "graysmod:strider_boots"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_strider_scale"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "graysmod:strider_boots"
+    ]
+  }
+}

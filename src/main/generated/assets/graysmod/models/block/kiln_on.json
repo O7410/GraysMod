@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "bottom": "graysmod:block/kiln_bottom",
+    "front": "graysmod:block/kiln_front_on",
+    "side": "graysmod:block/kiln_side",
+    "top": "graysmod:block/kiln_top"
+  }
+}

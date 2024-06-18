@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "minecraft:block/prismarine",
+    "east": "graysmod:block/prismarine_workbench_side",
+    "north": "graysmod:block/prismarine_workbench_front",
+    "particle": "graysmod:block/prismarine_workbench_front",
+    "south": "graysmod:block/prismarine_workbench_side",
+    "up": "graysmod:block/prismarine_workbench_top",
+    "west": "graysmod:block/prismarine_workbench_front"
+  }
+}

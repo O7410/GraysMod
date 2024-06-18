@@ -1,0 +1,31 @@
+{
+	"block.note_block.electric_guitar": {
+		"sounds": [
+			"graysmod:note/electric_guitar"
+		]
+	},
+	
+	"entity.ball_of_gel.throw": {
+		"sounds": [
+			"random/bow"
+		],
+		"subtitle": "subtitles.entity.ball_of_gel.throw"
+	},
+
+	"entity.cluckshroom.shear": {
+		"sounds": [
+			"mob/sheep/shear"
+		],
+		"subtitle": "subtitles.item.shears.shear"
+	},
+	
+	"entity.bouldering_zombie.ambient_climb": {
+		"sounds": [
+			"graysmod:mob/bouldering_zombie/ambient_climb1",
+			"graysmod:mob/bouldering_zombie/ambient_climb2",
+			"graysmod:mob/bouldering_zombie/ambient_climb3",
+			"graysmod:mob/bouldering_zombie/ambient_climb4"
+		],
+		"subtitle": "subtitles.entity.bouldering_zombie.ambient_climb"
+	}
+}

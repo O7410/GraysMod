@@ -1,0 +1,46 @@
+{
+  "parent": "graysmod:graysmod/icarus",
+  "criteria": {
+    "turtle_armor": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:turtle_helmet"
+          },
+          {
+            "items": "graysmod:turtle_shell"
+          },
+          {
+            "items": "graysmod:turtle_trousers"
+          },
+          {
+            "items": "graysmod:turtle_shoes"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.graysmod.so_scute.description"
+    },
+    "frame": "goal",
+    "icon": {
+      "count": 1,
+      "id": "graysmod:turtle_shell"
+    },
+    "title": {
+      "translate": "advancements.graysmod.so_scute.title"
+    }
+  },
+  "requirements": [
+    [
+      "turtle_armor"
+    ]
+  ],
+  "rewards": {
+    "experience": 45
+  },
+  "sends_telemetry_event": true
+}

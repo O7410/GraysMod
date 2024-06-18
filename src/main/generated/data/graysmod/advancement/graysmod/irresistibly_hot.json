@@ -1,0 +1,31 @@
+{
+  "parent": "graysmod:graysmod/hot_pockets",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.graysmod.irresistibly_hot.description"
+    },
+    "frame": "challenge",
+    "hidden": true,
+    "icon": {
+      "count": 1,
+      "id": "graysmod:hot_pocket"
+    },
+    "title": {
+      "translate": "advancements.graysmod.irresistibly_hot.title"
+    }
+  },
+  "requirements": [
+    [
+      "impossible"
+    ]
+  ],
+  "rewards": {
+    "experience": 100
+  },
+  "sends_telemetry_event": true
+}

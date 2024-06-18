@@ -1,0 +1,12 @@
+/advancement revoke Graysblock through graysmod:graysmod/root
+/recipe give @s graysmod:glass_from_firing
+/recipe take @s graysmod:glass_from_firing
+/time add 12000
+/recipe give Graysblock *
+/give @s graysmod:makeshift_wings[minecraft:damage=59]
+/give @s armor_stand
+/give @s minecraft:firework_rocket 64
+/time add 1000
+/advancement revoke Graysblock only graysmod:graysmod/icarus
+/give @s graysmod:prismarine_workbench
+/give @s graysmod:ball_of_repulsion_gel

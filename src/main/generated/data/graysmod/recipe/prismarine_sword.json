@@ -1,0 +1,21 @@
+{
+  "type": "graysmod:shaped_prismarine",
+  "category": "equipment",
+  "key": {
+    "p": {
+      "item": "minecraft:prismarine_shard"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "p",
+    "p",
+    "s"
+  ],
+  "result": {
+    "count": 1,
+    "id": "graysmod:prismarine_sword"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "graysmod:item/makeshift_wings"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "broken": 1
+      },
+      "model": "graysmod:item/broken_makeshift_wings"
+    }
+  ]
+}

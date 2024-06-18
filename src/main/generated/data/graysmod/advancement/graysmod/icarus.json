@@ -1,0 +1,26 @@
+{
+  "parent": "graysmod:graysmod/root",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.graysmod.icarus.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "graysmod:makeshift_wings"
+    },
+    "title": {
+      "translate": "advancements.graysmod.icarus.title"
+    }
+  },
+  "requirements": [
+    [
+      "impossible"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "b": {
+      "item": "minecraft:bricks"
+    },
+    "f": {
+      "item": "minecraft:furnace"
+    },
+    "s": {
+      "item": "minecraft:smooth_basalt"
+    }
+  },
+  "pattern": [
+    "sss",
+    "bfb",
+    "bbb"
+  ],
+  "result": {
+    "count": 1,
+    "id": "graysmod:kiln"
+  }
+}

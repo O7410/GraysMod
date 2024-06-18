@@ -1,0 +1,31 @@
+{
+  "parent": "graysmod:graysmod/root",
+  "criteria": {
+    "hot_pocket": {
+      "conditions": {
+        "item": {
+          "items": "graysmod:hot_pocket"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.graysmod.hot_pockets.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "graysmod:hot_pocket"
+    },
+    "title": {
+      "translate": "advancements.graysmod.hot_pockets.title"
+    }
+  },
+  "requirements": [
+    [
+      "hot_pocket"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

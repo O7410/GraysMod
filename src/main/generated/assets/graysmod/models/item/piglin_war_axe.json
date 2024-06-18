@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "graysmod:item/piglin_war_axe"
+  }
+}

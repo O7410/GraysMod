@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "s": {
+      "item": "minecraft:turtle_scute"
+    }
+  },
+  "pattern": [
+    "s s",
+    "s s"
+  ],
+  "result": {
+    "count": 1,
+    "id": "graysmod:turtle_shoes"
+  }
+}
