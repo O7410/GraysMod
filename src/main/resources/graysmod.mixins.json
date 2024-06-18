@@ -1,0 +1,20 @@
+{
+  "required": true,
+  "package": "graysblock.graysmod.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "ExampleMixin",
+    "GrindstoneScreenHandlerMixin",
+    "GrindstoneScreenHandlerOutputMixin",
+    "GrindstoneScreenHandlerSlotsMixin",
+    "LivingEntityMixin",
+    "RecipeBookCategoryMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "client": [
+    "CapeFeatureRendererMixin",
+    "CatEntityRendererMixin"
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "graysmod:item/staff_of_regrowth"
+  }
+}
