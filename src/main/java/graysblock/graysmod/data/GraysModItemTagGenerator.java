@@ -1,11 +1,9 @@
 package graysblock.graysmod.data;
 
 import graysblock.graysmod.item.GraysModItems;
-import graysblock.graysmod.registry.tag.GraysModBlockTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryWrapper;
-import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.ItemTags;
 
 import java.util.concurrent.CompletableFuture;
@@ -41,5 +39,8 @@ public class GraysModItemTagGenerator extends FabricTagProvider.ItemTagProvider 
 
         getOrCreateTagBuilder(ItemTags.HOES)
                 .add(GraysModItems.PRISMARINE_HOE);
+
+        getOrCreateTagBuilder(ItemTags.ARROWS)
+                .add(GraysModItems.WIND_BOLT);
     }
 }

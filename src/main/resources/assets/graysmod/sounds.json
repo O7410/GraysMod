@@ -27,5 +27,23 @@
 			"graysmod:mob/bouldering_zombie/ambient_climb4"
 		],
 		"subtitle": "subtitles.entity.bouldering_zombie.ambient_climb"
+	},
+	
+	"entity.wind_bolt.wind_burst": {
+		"sounds": [
+			{
+				"name": "graysmod:entity/wind_bolt/wind_burst1",
+				"pitch": 1.2
+			},
+			{
+				"name": "graysmod:entity/wind_bolt/wind_burst2",
+				"pitch": 1.2
+			},
+			{
+				"name": "graysmod:entity/wind_bolt/wind_burst3",
+				"pitch": 1.2
+			}
+		],
+		"subtitle": "subtitles.entity.wind_bolt.wind_burst"
 	}
 }

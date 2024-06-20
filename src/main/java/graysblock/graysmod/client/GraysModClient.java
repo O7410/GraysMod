@@ -7,6 +7,7 @@ import graysblock.graysmod.client.gui.screen.ingame.PrismarineWorkbenchScreen;
 import graysblock.graysmod.client.item.GraysModModelPredicates;
 import graysblock.graysmod.client.render.entity.BoulderingZombieEntityRenderer;
 import graysblock.graysmod.client.render.entity.CluckshroomEntityRenderer;
+import graysblock.graysmod.client.render.entity.WindBoltEntityRenderer;
 import graysblock.graysmod.client.render.entity.feature.MakeshiftWingsFeatureRenderer;
 import graysblock.graysmod.client.render.entity.model.GraysModEntityModelLayers;
 import graysblock.graysmod.entity.GraysModEntityTypes;
@@ -44,8 +45,9 @@ public class GraysModClient implements ClientModInitializer {
     }
     private void registerEntityRenderers() {
         EntityRendererRegistry.register(GraysModEntityTypes.BALL_OF_REPULSION_GEL, FlyingItemEntityRenderer::new);
-        EntityRendererRegistry.register(GraysModEntityTypes.CLUCKSHROOM, CluckshroomEntityRenderer::new);
         EntityRendererRegistry.register(GraysModEntityTypes.BOULDERING_ZOMBIE, BoulderingZombieEntityRenderer::new);
+        EntityRendererRegistry.register(GraysModEntityTypes.CLUCKSHROOM, CluckshroomEntityRenderer::new);
+        EntityRendererRegistry.register(GraysModEntityTypes.WIND_BOLT, WindBoltEntityRenderer::new);
     }
 
     private void registerScreens() {

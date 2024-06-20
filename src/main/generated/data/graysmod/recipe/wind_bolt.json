@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "b": {
+      "item": "minecraft:breeze_rod"
+    },
+    "c": {
+      "item": "minecraft:copper_ingot"
+    },
+    "f": {
+      "item": "minecraft:feather"
+    }
+  },
+  "pattern": [
+    "c",
+    "b",
+    "f"
+  ],
+  "result": {
+    "count": 1,
+    "id": "graysmod:wind_bolt"
+  }
+}

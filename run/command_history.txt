@@ -10,3 +10,10 @@
 /advancement revoke Graysblock only graysmod:graysmod/icarus
 /give @s graysmod:prismarine_workbench
 /give @s graysmod:ball_of_repulsion_gel
+/give @s graysmod:wind_bolt
+/summon graysmod:wind_bolt
+/summon graysmod:wind_bolt ~ ~ ~
+/summon minecraft:arrow
+/summon graysmod:wind_bolt ~ ~ ~
+/summon graysmod:wind_bolt ~ ~10 ~
+/summon graysmod:wind_bolt ~ ~-2 ~

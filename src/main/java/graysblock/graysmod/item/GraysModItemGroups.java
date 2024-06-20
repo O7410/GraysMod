@@ -38,6 +38,7 @@ public class GraysModItemGroups {
                     entries.add(GraysModBlocks.PRISMARINE_WORKBENCH);
                     entries.add(GraysModItems.MAKESHIFT_WINGS);
                     entries.add(GraysModItems.BALL_OF_REPULSION_GEL);
+                    entries.add(GraysModItems.WIND_BOLT);
                 }).build());
 
         GraysMod.LOGGER.info("Registering GraysMod Item Groups...");

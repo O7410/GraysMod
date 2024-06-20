@@ -1,4 +1,4 @@
-// 1.21	2024-06-17T01:01:09.9246571	GraysMod/Recipes
+// 1.21	2024-06-19T23:50:03.2011264	GraysMod/Recipes
 a49d2c5eeecbc7a1d92ab2ce5a0e1a1f450c70bc data\graysmod\recipe\pink_glazed_terracotta_from_firing.json
 79d9ad468184ef87164d2da1db6cebc2b9e3dbec data\graysmod\advancement\recipes\combat\turtle_shoes.json
 36900550c38b05189746e991964d3fdc60315829 data\graysmod\recipe\yellow_glazed_terracotta_from_firing.json
@@ -17,6 +17,7 @@ d8b92165e4804d9e3f7bed44da3ca72c252d10fb data\graysmod\advancement\recipes\decor
 ac004789f4a49c274bb892c56db84e990a804610 data\graysmod\recipe\cracked_stone_bricks_from_firing.json
 cfeaa07f9d9108d8906de0628fdcc13b98ec2695 data\graysmod\advancement\recipes\building_blocks\stone_from_firing.json
 da3ba6aae4c5f99f445122c311b45ff850c98d00 data\graysmod\recipe\nether_brick_from_firing.json
+40457e1f0da07e9199fb9fc93c7c2d2320e101e1 data\graysmod\advancement\recipes\combat\wind_bolt.json
 ee037e7ed3ebd971f02ac2f369736327c50cd428 data\graysmod\recipe\green_glazed_terracotta_from_firing.json
 3c8f1b020940604042934e58b365f38d1aee6632 data\graysmod\advancement\recipes\building_blocks\cracked_nether_bricks_from_firing.json
 7bde802bea643837e40325473a3734d3b38a5c6d data\graysmod\advancement\recipes\decorations\red_glazed_terracotta_from_firing.json
@@ -30,6 +31,7 @@ e5598e0d5d1ea630e81ee5c4a26b87a5f6965b61 data\graysmod\advancement\recipes\comba
 4fe3a92f4ff44f58aa346470ef1cbee6296be5ff data\graysmod\recipe\turtle_shell.json
 49f6da07f0ef9bc84e7add1f63178b51dc5bbac3 data\graysmod\recipe\glass_from_firing.json
 d232b987d97f23176f1bbbd47dfe5e5973b5d359 data\graysmod\recipe\smooth_red_sandstone_from_firing.json
+1dce2b2a2596c697550d55273e9322b6156a5eb5 data\graysmod\recipe\wind_bolt.json
 03d61400f2af3223fc2b045024d6642b77ba7a8a data\graysmod\recipe\black_glazed_terracotta_from_firing.json
 c5af7deacd8b2ed99bfbb54f08071ba14c8e6b59 data\graysmod\recipe\smooth_basalt_from_firing.json
 369b6a7cb9257bd74e6ea6d225d25a5642445251 data\graysmod\recipe\lime_glazed_terracotta_from_firing.json

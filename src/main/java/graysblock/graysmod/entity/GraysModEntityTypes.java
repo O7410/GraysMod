@@ -3,9 +3,8 @@ package graysblock.graysmod.entity;
 import graysblock.graysmod.GraysMod;
 import graysblock.graysmod.entity.mob.BoulderingZombieEntity;
 import graysblock.graysmod.entity.passive.CluckshroomEntity;
+import graysblock.graysmod.entity.projectile.WindBoltEntity;
 import graysblock.graysmod.entity.projectile.thrown.BallOfRepulsionGelEntity;
-import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
-import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.registry.Registries;
@@ -32,5 +31,14 @@ public class GraysModEntityTypes {
             EntityType.Builder.create(BoulderingZombieEntity::new, SpawnGroup.MONSTER)
                     .dimensions(0.6F, 1.95F)
                     .eyeHeight(1.74F)
+                    .build());
+
+    public static final EntityType<WindBoltEntity> WIND_BOLT = Registry.register(Registries.ENTITY_TYPE,
+            Identifier.of(GraysMod.MOD_ID, "wind_bolt"),
+            EntityType.Builder.<WindBoltEntity>create(WindBoltEntity::new, SpawnGroup.MISC)
+                    .dimensions(0.5F, 0.5F)
+                    .eyeHeight(0.13F)
+                    .maxTrackingRange(4)
+                    .trackingTickInterval(20)
                     .build());
 }

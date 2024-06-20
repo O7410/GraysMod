@@ -7,8 +7,10 @@ import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Rarity;
 
 public class GraysModItems {
+
     public static final Item BALL_OF_REPULSION_GEL = registerItem("ball_of_repulsion_gel", new BallOfRepulsionGelItem(new Item.Settings()));
     public static final Item MAKESHIFT_WINGS = registerItem("makeshift_wings", new MakeshiftWingsItem(new Item.Settings().maxDamage(60)));
     public static final Item HOT_POCKET = registerItem("hot_pocket", new HotPocketItem(new Item.Settings().food(GraysModFoodComponents.HOT_POCKET)));
@@ -24,6 +26,7 @@ public class GraysModItems {
     public static final Item TURTLE_SHELL = registerItem("turtle_shell", new ArmorItem(GraysModArmorMaterials.TURTLE, ArmorItem.Type.CHESTPLATE, new Item.Settings().maxDamage(ArmorItem.Type.CHESTPLATE.getMaxDamage(25))));
     public static final Item TURTLE_SHOES = registerItem("turtle_shoes", new ArmorItem(GraysModArmorMaterials.TURTLE, ArmorItem.Type.BOOTS, new Item.Settings().maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(25))));
     public static final Item TURTLE_TROUSERS = registerItem("turtle_trousers", new ArmorItem(GraysModArmorMaterials.TURTLE, ArmorItem.Type.LEGGINGS, new Item.Settings().maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(25))));
+    public static final Item WIND_BOLT = registerItem("wind_bolt", new WindBoltItem(new Item.Settings().rarity(Rarity.UNCOMMON)));
 
     public static final Item BOULDERING_ZOMBIE_SPAWN_EGG = registerItem("bouldering_zombie_spawn_egg", new SpawnEggItem(GraysModEntityTypes.BOULDERING_ZOMBIE, 0x4d575a, 0x492320, new Item.Settings()));
     public static final Item CLUCKSHROOM_SPAWN_EGG = registerItem("cluckshroom_spawn_egg", new SpawnEggItem(GraysModEntityTypes.CLUCKSHROOM, 0xd31e22, 0xf6c39a, new Item.Settings()));

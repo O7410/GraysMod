@@ -94,6 +94,17 @@ public class GraysModRecipeGenerator extends FabricRecipeProvider {
                         FabricRecipeProvider.conditionsFromItem(Items.PRISMARINE_SHARD))
                 .offerTo(exporter);
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, GraysModItems.WIND_BOLT)
+                .pattern("c")
+                .pattern("b")
+                .pattern("f")
+                .input('c', Items.COPPER_INGOT)
+                .input('b', Items.BREEZE_ROD)
+                .input('f', Items.FEATHER)
+                .criterion(FabricRecipeProvider.hasItem(Items.BREEZE_ROD),
+                        FabricRecipeProvider.conditionsFromItem(Items.BREEZE_ROD))
+                .offerTo(exporter);
+
 
         createKilnRecipe(exporter, Ingredient.fromTag(ItemTags.SMELTS_TO_GLASS), RecipeCategory.BUILDING_BLOCKS, Blocks.GLASS.asItem(), 0.1F, 100);
         createKilnRecipe(exporter, Ingredient.ofItems(Blocks.WHITE_TERRACOTTA), RecipeCategory.DECORATIONS, Blocks.WHITE_GLAZED_TERRACOTTA.asItem(), 0.1F, 100);

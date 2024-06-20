@@ -39,7 +39,7 @@ public abstract class LivingEntityMixin extends Entity {
         boolean hasMagmaSpeed = this.hasStatusEffect(GraysModStatusEffects.MAGMA_SPEED);
         if(hasMagmaSpeed) {
             int i = this.getStatusEffect(GraysModStatusEffects.MAGMA_SPEED).getAmplifier() + 1;
-            return original + (0.07F * i);
+            return i >= 7 ? original + (0.07F * i) : original + 0.5F;
         } else {
             return original;
         }

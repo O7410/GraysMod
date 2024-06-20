@@ -21,5 +21,8 @@ public class GraysModEntityTypeTagGenerator extends FabricTagProvider.EntityType
 
         getOrCreateTagBuilder(EntityTypeTags.ZOMBIES)
                 .add(GraysModEntityTypes.BOULDERING_ZOMBIE);
+
+        getOrCreateTagBuilder(EntityTypeTags.ARROWS)
+                .add(GraysModEntityTypes.WIND_BOLT);
     }
 }

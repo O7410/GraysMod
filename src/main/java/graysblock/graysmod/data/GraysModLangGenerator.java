@@ -35,6 +35,7 @@ public class GraysModLangGenerator extends FabricLanguageProvider {
         translationBuilder.add(GraysModItems.TURTLE_SHELL, "Turtle Shell");
         translationBuilder.add(GraysModItems.TURTLE_SHOES, "Turtle Shoes");
         translationBuilder.add(GraysModItems.TURTLE_TROUSERS, "Turtle Trousers");
+        translationBuilder.add(GraysModItems.WIND_BOLT, "Wind Bolt");
 
         translationBuilder.add(GraysModBlocks.KILN, "Kiln");
         translationBuilder.add(GraysModBlocks.PRISMARINE_WORKBENCH, "Prismarine Workbench");
@@ -47,6 +48,7 @@ public class GraysModLangGenerator extends FabricLanguageProvider {
         translationBuilder.add(GraysModEntityTypes.BALL_OF_REPULSION_GEL, "Ball of Repulsion Gel");
         translationBuilder.add(GraysModEntityTypes.BOULDERING_ZOMBIE, "Bouldering Zombie");
         translationBuilder.add(GraysModEntityTypes.CLUCKSHROOM, "Cluckshroom");
+        translationBuilder.add(GraysModEntityTypes.WIND_BOLT, "Wind Bolt");
 
         translationBuilder.add("container.kiln", "Kiln");
         translationBuilder.add("gui.recipebook.toggleRecipes.fireable", "Showing Fireable");
@@ -66,5 +68,6 @@ public class GraysModLangGenerator extends FabricLanguageProvider {
 
         translationBuilder.add("subtitles.entity.ball_of_gel.throw", "Ball of Gel flies");
         translationBuilder.add("subtitles.entity.bouldering_zombie.ambient_climb", "Bouldering Zombie climbs");
+        translationBuilder.add("subtitles.entity.wind_bolt.wind_burst", "Wind Bolt bursts");
     }
 }
