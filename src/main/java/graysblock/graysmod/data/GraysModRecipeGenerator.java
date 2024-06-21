@@ -94,7 +94,7 @@ public class GraysModRecipeGenerator extends FabricRecipeProvider {
                         FabricRecipeProvider.conditionsFromItem(Items.PRISMARINE_SHARD))
                 .offerTo(exporter);
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, GraysModItems.WIND_BOLT)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, GraysModItems.WIND_BOLT, 4)
                 .pattern("c")
                 .pattern("b")
                 .pattern("f")

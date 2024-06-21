@@ -77,14 +77,6 @@ public class WindBoltEntity extends PersistentProjectileEntity {
     }
 
     @Override
-    protected void onCollision(HitResult hitResult) {
-        super.onCollision(hitResult);
-        if(!this.getWorld().isClient) {
-            this.discard();
-        }
-    }
-
-    @Override
     protected ItemStack getDefaultItemStack() {
         return new ItemStack(GraysModItems.WIND_BOLT);
     }
