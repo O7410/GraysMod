@@ -42,6 +42,7 @@ public class GraysModModelGenerator extends FabricModelProvider {
         itemModelGenerator.registerArmor((ArmorItem) GraysModItems.TURTLE_SHOES);
         itemModelGenerator.registerArmor((ArmorItem) GraysModItems.TURTLE_TROUSERS);
         itemModelGenerator.register(GraysModItems.VIAL_OF_RECOLLECTION, Models.GENERATED);
+        itemModelGenerator.register(GraysModItems.VIAL_OF_SHADOWS, Models.GENERATED);
         itemModelGenerator.register(GraysModItems.WIND_BOLT, Models.GENERATED);
 
         itemModelGenerator.register(GraysModItems.BOULDERING_ZOMBIE_SPAWN_EGG, new Model(Optional.of(Identifier.ofVanilla("item/template_spawn_egg")), Optional.empty()));

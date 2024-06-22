@@ -38,6 +38,7 @@ public class GraysModItemGroups {
                     entries.add(GraysModItems.BALL_OF_REPULSION_GEL);
                     entries.add(GraysModItems.ECHO_VIAL);
                     entries.add(GraysModItems.VIAL_OF_RECOLLECTION);
+                    entries.add(GraysModItems.VIAL_OF_SHADOWS);
                 }).build());
 
         GraysMod.LOGGER.info("Registering GraysMod Item Groups...");

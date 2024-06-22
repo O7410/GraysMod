@@ -37,6 +37,7 @@ public class GraysModLangGenerator extends FabricLanguageProvider {
         translationBuilder.add(GraysModItems.TURTLE_SHOES, "Turtle Shoes");
         translationBuilder.add(GraysModItems.TURTLE_TROUSERS, "Turtle Trousers");
         translationBuilder.add(GraysModItems.VIAL_OF_RECOLLECTION, "Vial of Recollection");
+        translationBuilder.add(GraysModItems.VIAL_OF_SHADOWS, "Vial of Shadows");
         translationBuilder.add(GraysModItems.WIND_BOLT, "Wind Bolt");
 
         translationBuilder.add(GraysModBlocks.KILN, "Kiln");
@@ -46,6 +47,7 @@ public class GraysModLangGenerator extends FabricLanguageProvider {
         translationBuilder.add(GraysModItemGroups.GRAYSMOD, "GraysMod");
 
         translationBuilder.add("effect.graysmod.magma_speed", "Magma Speed");
+        translationBuilder.add("effect.graysmod.shadow", "Shadow");
 
         translationBuilder.add(GraysModEntityTypes.BALL_OF_REPULSION_GEL, "Ball of Repulsion Gel");
         translationBuilder.add(GraysModEntityTypes.BOULDERING_ZOMBIE, "Bouldering Zombie");
@@ -72,5 +74,7 @@ public class GraysModLangGenerator extends FabricLanguageProvider {
         translationBuilder.add("subtitles.entity.bouldering_zombie.ambient_climb", "Bouldering Zombie climbs");
         translationBuilder.add("subtitles.entity.wind_bolt.wind_burst", "Wind Bolt bursts");
         translationBuilder.add("subtitles.item.vial.dispose", "Vial breaks");
+
+        translationBuilder.add("tag.item.graysmod.vials", "Vials");
     }
 }

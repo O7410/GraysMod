@@ -4,6 +4,7 @@ import graysblock.graysmod.GraysMod;
 import graysblock.graysmod.component.type.GraysModFoodComponents;
 import graysblock.graysmod.entity.GraysModEntityTypes;
 import graysblock.graysmod.item.vials.VialOfRecollectionItem;
+import graysblock.graysmod.item.vials.VialOfShadowsItem;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -29,6 +30,7 @@ public class GraysModItems {
     public static final Item TURTLE_SHOES = registerItem("turtle_shoes", new ArmorItem(GraysModArmorMaterials.TURTLE, ArmorItem.Type.BOOTS, new Item.Settings().maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(25))));
     public static final Item TURTLE_TROUSERS = registerItem("turtle_trousers", new ArmorItem(GraysModArmorMaterials.TURTLE, ArmorItem.Type.LEGGINGS, new Item.Settings().maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(25))));
     public static final Item VIAL_OF_RECOLLECTION = registerItem("vial_of_recollection", new VialOfRecollectionItem(new Item.Settings().maxCount(16).rarity(Rarity.RARE)));
+    public static final Item VIAL_OF_SHADOWS = registerItem("vial_of_shadows", new VialOfShadowsItem(new Item.Settings().maxCount(16).rarity(Rarity.RARE)));
     public static final Item WIND_BOLT = registerItem("wind_bolt", new WindBoltItem(new Item.Settings().rarity(Rarity.UNCOMMON)));
 
     public static final Item BOULDERING_ZOMBIE_SPAWN_EGG = registerItem("bouldering_zombie_spawn_egg", new SpawnEggItem(GraysModEntityTypes.BOULDERING_ZOMBIE, 0x4d575a, 0x492320, new Item.Settings()));

@@ -55,4 +55,7 @@ public class GraysMod implements ModInitializer {
 		});
 	}
 
+	/**
+	 * TODO: Fix "Shadow" status effect to let you pass through blocks in the "SHADOW_PASSES_THROUGH" tag.
+	 */
 }

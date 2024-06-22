@@ -10,6 +10,7 @@ import net.minecraft.util.Identifier;
 public class GraysModStatusEffects {
 
     public static final RegistryEntry<StatusEffect> MAGMA_SPEED = register("magma_speed", new MagmaSpeedStatusEffect());
+    public static final RegistryEntry<StatusEffect> SHADOW = register("shadow", new ShadowStatusEffect());
 
     private static RegistryEntry<StatusEffect> register(String id, StatusEffect statusEffect) {
         return Registry.registerReference(Registries.STATUS_EFFECT, Identifier.of(GraysMod.MOD_ID, id), statusEffect);
