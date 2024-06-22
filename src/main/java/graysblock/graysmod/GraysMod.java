@@ -14,7 +14,6 @@ import graysblock.graysmod.recipe.GraysModRecipeSerializers;
 import graysblock.graysmod.recipe.GraysModRecipeTypes;
 import graysblock.graysmod.sound.GraysModSoundEvents;
 import net.fabricmc.api.ModInitializer;
-
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.minecraft.entity.EquipmentSlot;

@@ -1,4 +1,4 @@
-// 1.21	2024-06-20T18:25:34.9973194	GraysMod/Model Definitions
+// 1.21	2024-06-21T15:05:56.6746533	GraysMod/Model Definitions
 c7fab2d4ef4d653bff3fb4535d3efa8334dd8be3 assets\graysmod\models\item\strider_scale.json
 d604d4e8a6fa906ea955d6e42d858cc2fb8dede7 assets\graysmod\models\item\turtle_trousers_emerald_trim.json
 2cccf5ed8c827357e04f2b35da6367a95c4c903d assets\graysmod\models\item\turtle_trousers_lapis_trim.json
@@ -26,6 +26,8 @@ d5886ceb2b495152aef54f6270bb22da08f3ab0f assets\graysmod\models\item\turtle_shoe
 615191e162da70f38cf2036a5536dfa66e03b9e9 assets\graysmod\models\item\strider_boots.json
 78f112032ef62dfbb9f5be00ddd54c861276e2b1 assets\graysmod\models\item\hot_pocket.json
 59f404fb1742701eee25de8a0115401c49ac776c assets\graysmod\models\item\turtle_shoes.json
+5138b52c5405cf449ff3197f1b2244f48c2dc5a8 assets\graysmod\models\item\vial_of_recollection.json
+c4762ffc062b8cbb2d65dc2157e47db5c26bdbb2 assets\graysmod\models\item\echo_vial.json
 4d0e38ec156683396b5f24966abe3be3cb3a2439 assets\graysmod\models\item\wind_bolt.json
 8084cb1746599f809fa49d5db4a67beed46ad842 assets\graysmod\models\item\strider_boots_emerald_trim.json
 d99dcd0c078cab504a442efddf087e0926dd3381 assets\graysmod\models\item\strider_boots_quartz_trim.json
@@ -58,8 +60,8 @@ b807f217bc6d58993d5f835f32281f04b1a87050 assets\graysmod\models\item\staff_of_re
 c482eb7119b0c27c911c634b10e4f6ee2657aafb assets\graysmod\blockstates\repulsion_gel.json
 f4350c85c2321a8ee4cbad7a628b50ba08e6259c assets\graysmod\models\item\repulsion_gel.json
 419f3077307360b36eaee6f9f637481cebb1e2d5 assets\graysmod\models\item\turtle_shell.json
-c13b332702004e4853d6a5a52b2e2e0c01b3f580 assets\graysmod\models\item\turtle_shell_copper_trim.json
 19f36b9615fee0309df607266d03c0b0df82ef96 assets\graysmod\models\item\prismarine_sword.json
+c13b332702004e4853d6a5a52b2e2e0c01b3f580 assets\graysmod\models\item\turtle_shell_copper_trim.json
 c77ba4684c156702b913de7e2d032df4fc752653 assets\graysmod\models\item\turtle_trousers_diamond_trim.json
 c1b88d8af6a7139144ef9cdcfa918ba88aad90b2 assets\graysmod\models\block\prismarine_workbench.json
 963a81a8c4ed236fdc9abc07a98126dbee71e673 assets\graysmod\models\item\turtle_shoes_copper_trim.json

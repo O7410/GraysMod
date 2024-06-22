@@ -24,6 +24,7 @@
   "item.graysmod.ball_of_repulsion_gel": "Ball of Repulsion Gel",
   "item.graysmod.bouldering_zombie_spawn_egg": "Bouldering Zombie Spawn Egg",
   "item.graysmod.cluckshroom_spawn_egg": "Cluckshroom Spawn Egg",
+  "item.graysmod.echo_vial": "Echo Vial",
   "item.graysmod.hot_pocket": "Hot Pocket",
   "item.graysmod.makeshift_wings": "Makeshift Wings",
   "item.graysmod.piglin_war_axe": "Piglin War Axe",
@@ -38,9 +39,11 @@
   "item.graysmod.turtle_shell": "Turtle Shell",
   "item.graysmod.turtle_shoes": "Turtle Shoes",
   "item.graysmod.turtle_trousers": "Turtle Trousers",
+  "item.graysmod.vial_of_recollection": "Vial of Recollection",
   "item.graysmod.wind_bolt": "Wind Bolt",
   "itemGroup.graysmod": "GraysMod",
   "subtitles.entity.ball_of_gel.throw": "Ball of Gel flies",
   "subtitles.entity.bouldering_zombie.ambient_climb": "Bouldering Zombie climbs",
-  "subtitles.entity.wind_bolt.wind_burst": "Wind Bolt bursts"
+  "subtitles.entity.wind_bolt.wind_burst": "Wind Bolt bursts",
+  "subtitles.item.vial.dispose": "Vial breaks"
 }

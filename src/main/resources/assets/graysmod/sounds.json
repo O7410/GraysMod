@@ -45,5 +45,12 @@
 			}
 		],
 		"subtitle": "subtitles.entity.wind_bolt.wind_burst"
+	},
+	
+	"item.vial.dispose": {
+		"sounds": [
+			"graysmod:item/vial/dispose"
+		],
+		"subtitle": "subtitles.item.vial.dispose"
 	}
 }

@@ -20,6 +20,7 @@ public class GraysModLangGenerator extends FabricLanguageProvider {
     public void generateTranslations(RegistryWrapper.WrapperLookup registryLookup, TranslationBuilder translationBuilder) {
         translationBuilder.add(GraysModItems.BALL_OF_REPULSION_GEL, "Ball of Repulsion Gel");
         translationBuilder.add(GraysModItems.BOULDERING_ZOMBIE_SPAWN_EGG, "Bouldering Zombie Spawn Egg");
+        translationBuilder.add(GraysModItems.ECHO_VIAL, "Echo Vial");
         translationBuilder.add(GraysModItems.CLUCKSHROOM_SPAWN_EGG, "Cluckshroom Spawn Egg");
         translationBuilder.add(GraysModItems.HOT_POCKET, "Hot Pocket");
         translationBuilder.add(GraysModItems.MAKESHIFT_WINGS, "Makeshift Wings");
@@ -35,6 +36,7 @@ public class GraysModLangGenerator extends FabricLanguageProvider {
         translationBuilder.add(GraysModItems.TURTLE_SHELL, "Turtle Shell");
         translationBuilder.add(GraysModItems.TURTLE_SHOES, "Turtle Shoes");
         translationBuilder.add(GraysModItems.TURTLE_TROUSERS, "Turtle Trousers");
+        translationBuilder.add(GraysModItems.VIAL_OF_RECOLLECTION, "Vial of Recollection");
         translationBuilder.add(GraysModItems.WIND_BOLT, "Wind Bolt");
 
         translationBuilder.add(GraysModBlocks.KILN, "Kiln");
@@ -69,5 +71,6 @@ public class GraysModLangGenerator extends FabricLanguageProvider {
         translationBuilder.add("subtitles.entity.ball_of_gel.throw", "Ball of Gel flies");
         translationBuilder.add("subtitles.entity.bouldering_zombie.ambient_climb", "Bouldering Zombie climbs");
         translationBuilder.add("subtitles.entity.wind_bolt.wind_burst", "Wind Bolt bursts");
+        translationBuilder.add("subtitles.item.vial.dispose", "Vial breaks");
     }
 }

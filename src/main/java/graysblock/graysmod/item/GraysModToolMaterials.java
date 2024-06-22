@@ -12,7 +12,7 @@ import java.util.function.Supplier;
 
 public enum GraysModToolMaterials implements ToolMaterial {
 
-    PRISMARINE (GraysModBlockTags.INCORRECT_FOR_PRISMARINE_TOOL, 625, 6.5F, 2.5F, 12, () -> Ingredient.ofItems(Items.PRISMARINE_SHARD)),
+    PRISMARINE (GraysModBlockTags.INCORRECT_FOR_PRISMARINE_TOOL, 412, 6F, 2.0F, 13, () -> Ingredient.ofItems(Items.PRISMARINE_SHARD)),
     GUILDED (BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 2245, 11F, 6.0F, 18, () -> Ingredient.ofItems(Items.GOLD_INGOT));
 
     private final TagKey<Block> inverseTag;
