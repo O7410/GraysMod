@@ -4,8 +4,6 @@ import graysblock.graysmod.GraysMod;
 import graysblock.graysmod.entity.mob.BoulderingZombieEntity;
 import graysblock.graysmod.entity.passive.CluckshroomEntity;
 import graysblock.graysmod.entity.projectile.thrown.BallOfRepulsionGelEntity;
-import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
-import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.registry.Registries;

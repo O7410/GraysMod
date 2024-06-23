@@ -12,7 +12,7 @@ public class GrindstoneScreenHandlerSlotsMixin {
 
     @Inject(method = "canInsert", at = @At("RETURN"), cancellable = true)
     private void modifyGrindstoneSlots(ItemStack stack, CallbackInfoReturnable<Boolean> cir) {
-        if(stack.isOf(Items.ENCHANTED_GOLDEN_APPLE)) {
+        if (stack.isOf(Items.ENCHANTED_GOLDEN_APPLE)) {
             cir.setReturnValue(true);
         }
     }

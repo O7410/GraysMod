@@ -9,11 +9,11 @@ import net.minecraft.util.Identifier;
 
 public class GraysModScreenHandlerTypes {
 
-    public static final ScreenHandlerType<KilnScreenHandler> KILN_SCREEN_HANDLER = Registry.register(Registries.SCREEN_HANDLER,
+    public static final ScreenHandlerType<KilnScreenHandler> KILN = Registry.register(Registries.SCREEN_HANDLER,
             Identifier.of(GraysMod.MOD_ID, "kiln"),
             new ScreenHandlerType<>(KilnScreenHandler::new, FeatureSet.empty()));
 
-    public static final ScreenHandlerType<PrismarineWorkbenchScreenHandler> PRISMARINE_WORKBENCH_SCREEN_HANDLER = Registry.register(Registries.SCREEN_HANDLER,
+    public static final ScreenHandlerType<PrismarineWorkbenchScreenHandler> PRISMARINE_WORKBENCH = Registry.register(Registries.SCREEN_HANDLER,
             Identifier.of(GraysMod.MOD_ID, "prismarine_workbench"),
             new ScreenHandlerType<>(PrismarineWorkbenchScreenHandler::new, FeatureSet.empty()));
 

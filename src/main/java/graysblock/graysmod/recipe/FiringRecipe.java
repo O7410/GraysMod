@@ -2,7 +2,9 @@ package graysblock.graysmod.recipe;
 
 import graysblock.graysmod.block.GraysModBlocks;
 import net.minecraft.item.ItemStack;
-import net.minecraft.recipe.*;
+import net.minecraft.recipe.AbstractCookingRecipe;
+import net.minecraft.recipe.Ingredient;
+import net.minecraft.recipe.RecipeSerializer;
 import net.minecraft.recipe.book.CookingRecipeCategory;
 
 public class FiringRecipe extends AbstractCookingRecipe {
@@ -17,7 +19,7 @@ public class FiringRecipe extends AbstractCookingRecipe {
     }
 
     @Override
-    public RecipeSerializer<?> getSerializer() {
+    public RecipeSerializer<FiringRecipe> getSerializer() {
         return GraysModRecipeSerializers.FIRING;
     }
 

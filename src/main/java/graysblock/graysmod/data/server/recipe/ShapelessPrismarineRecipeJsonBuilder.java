@@ -6,6 +6,7 @@ import net.minecraft.advancement.AdvancementCriterion;
 import net.minecraft.advancement.AdvancementRequirements;
 import net.minecraft.advancement.AdvancementRewards;
 import net.minecraft.advancement.criterion.RecipeUnlockedCriterion;
+import net.minecraft.data.server.recipe.CraftingRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemConvertible;
@@ -21,12 +22,12 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Objects;
 
-public class ShapelessPrismarineRecipeJsonBuilder implements PrismarineRecipeJsonBuilder {
+public class ShapelessPrismarineRecipeJsonBuilder implements CraftingRecipeJsonBuilder {
     private final RecipeCategory category;
     private final Item output;
     private final int count;
     private final DefaultedList<Ingredient> inputs = DefaultedList.of();
-    private final Map<String, AdvancementCriterion<?>> advancementBuilder = new LinkedHashMap();
+    private final Map<String, AdvancementCriterion<?>> advancementBuilder = new LinkedHashMap<>();
     @Nullable
     private String group;
 
@@ -72,11 +73,13 @@ public class ShapelessPrismarineRecipeJsonBuilder implements PrismarineRecipeJso
         return this;
     }
 
+    @Override
     public ShapelessPrismarineRecipeJsonBuilder criterion(String string, AdvancementCriterion<?> advancementCriterion) {
         this.advancementBuilder.put(string, advancementCriterion);
         return this;
     }
 
+    @Override
     public ShapelessPrismarineRecipeJsonBuilder group(@Nullable String string) {
         this.group = string;
         return this;
@@ -97,7 +100,7 @@ public class ShapelessPrismarineRecipeJsonBuilder implements PrismarineRecipeJso
         this.advancementBuilder.forEach(builder::criterion);
         ShapelessPrismarineRecipe shapelessPrismarineRecipe = new ShapelessPrismarineRecipe(
                 Objects.requireNonNullElse(this.group, ""),
-                PrismarineRecipeJsonBuilder.toCraftingCategory(this.category),
+                CraftingRecipeJsonBuilder.toCraftingCategory(this.category),
                 new ItemStack(this.output, this.count),
                 this.inputs
         );

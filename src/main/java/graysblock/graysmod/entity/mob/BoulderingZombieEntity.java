@@ -12,36 +12,40 @@ import net.minecraft.sound.SoundEvent;
 import net.minecraft.world.World;
 
 public class BoulderingZombieEntity extends ZombieEntity {
-    private static final TrackedData<Byte> BOULDERING_ZOMBIE_FLAGS;
+    private static final TrackedData<Byte> BOULDERING_ZOMBIE_FLAGS = DataTracker.registerData(BoulderingZombieEntity.class, TrackedDataHandlerRegistry.BYTE);
 
     public BoulderingZombieEntity(EntityType<? extends BoulderingZombieEntity> entityType, World world) {
         super(entityType, world);
     }
 
+    @Override
     protected SoundEvent getAmbientSound() {
-        if(isClimbing()) {
+        if (isClimbing()) {
             return GraysModSoundEvents.ENTITY_BOULDERING_ZOMBIE_AMBIENT_CLIMB;
-        } else {
-            return super.getAmbientSound();
         }
+        return super.getAmbientSound();
     }
 
+    @Override
     protected EntityNavigation createNavigation(World world) {
         return new BoulderingZombieNavigation(this, world);
     }
 
+    @Override
     protected void initDataTracker(DataTracker.Builder builder) {
         super.initDataTracker(builder);
         builder.add(BOULDERING_ZOMBIE_FLAGS, (byte) 0);
     }
 
+    @Override
     public void tick() {
         super.tick();
-        if(!this.getWorld().isClient) {
+        if (!this.getWorld().isClient) {
             this.setClimbingWall(this.horizontalCollision);
         }
     }
 
+    @Override
     public boolean isClimbing() {
         return this.isClimbingWall();
     }
@@ -51,17 +55,13 @@ public class BoulderingZombieEntity extends ZombieEntity {
     }
 
     public void setClimbingWall(boolean climbing) {
-        byte b = this.dataTracker.get(BOULDERING_ZOMBIE_FLAGS);
-        if(climbing) {
-            b = (byte) (b | 1);
+        byte flags = this.dataTracker.get(BOULDERING_ZOMBIE_FLAGS);
+        if (climbing) {
+            flags = (byte) (flags | 1);
         } else {
-            b &= -2;
+            flags &= -2;
         }
 
-        this.dataTracker.set(BOULDERING_ZOMBIE_FLAGS, b);
-    }
-
-    static {
-        BOULDERING_ZOMBIE_FLAGS = DataTracker.registerData(BoulderingZombieEntity.class, TrackedDataHandlerRegistry.BYTE);
+        this.dataTracker.set(BOULDERING_ZOMBIE_FLAGS, flags);
     }
 }

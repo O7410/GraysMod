@@ -11,7 +11,7 @@ public final class GraysModBlockTags {
     public static final TagKey<Block> NEEDS_PRISMARINE_TOOL = of("needs_prismarine_tool");
     public static final TagKey<Block> INCORRECT_FOR_PRISMARINE_TOOL = of("incorrect_for_prismarine_tool");
 
-    private static TagKey<net.minecraft.block.Block> of(String id) {
+    private static TagKey<Block> of(String id) {
         return TagKey.of(RegistryKeys.BLOCK, Identifier.of(GraysMod.MOD_ID, id));
     }
 }

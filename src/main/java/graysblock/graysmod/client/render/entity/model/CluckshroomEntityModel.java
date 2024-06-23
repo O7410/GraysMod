@@ -1,14 +1,11 @@
 package graysblock.graysmod.client.render.entity.model;
 
 import com.google.common.collect.ImmutableList;
-import graysblock.graysmod.entity.passive.CluckshroomEntity;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.model.*;
-import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.entity.model.AnimalModel;
 import net.minecraft.client.render.entity.model.EntityModelPartNames;
-import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.math.MathHelper;
 

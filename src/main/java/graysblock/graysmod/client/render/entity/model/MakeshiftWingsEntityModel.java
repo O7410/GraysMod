@@ -26,12 +26,14 @@ public class MakeshiftWingsEntityModel<T extends LivingEntity> extends AnimalMod
         Dilation dilation = new Dilation(1.0F);
         modelPartData.addChild(
                 EntityModelPartNames.LEFT_WING,
-                ModelPartBuilder.create().uv(22, 0).cuboid(-10.0F, 0.0F, 0.0F, 10.0F, 20.0F, 2.0F, dilation),
+                ModelPartBuilder.create()
+                        .uv(22, 0).cuboid(-10.0F, 0.0F, 0.0F, 10.0F, 20.0F, 2.0F, dilation),
                 ModelTransform.of(5.0F, 0.0F, 0.0F, (float) (Math.PI / 12), 0.0F, (float) (-Math.PI / 12))
         );
         modelPartData.addChild(
                 EntityModelPartNames.RIGHT_WING,
-                ModelPartBuilder.create().uv(22, 0).mirrored().cuboid(0.0F, 0.0F, 0.0F, 10.0F, 20.0F, 2.0F, dilation),
+                ModelPartBuilder.create()
+                        .uv(22, 0).mirrored().cuboid(0.0F, 0.0F, 0.0F, 10.0F, 20.0F, 2.0F, dilation),
                 ModelTransform.of(-5.0F, 0.0F, 0.0F, (float) (Math.PI / 12), 0.0F, (float) (Math.PI / 12))
         );
 
@@ -48,6 +50,7 @@ public class MakeshiftWingsEntityModel<T extends LivingEntity> extends AnimalMod
         return ImmutableList.of(this.leftWing, this.rightWing);
     }
 
+    @Override
     public void setAngles(T livingEntity, float f, float g, float h, float i, float j) {
         float k = (float) (Math.PI / 12);
         float l = (float) (-Math.PI / 12);
@@ -55,10 +58,10 @@ public class MakeshiftWingsEntityModel<T extends LivingEntity> extends AnimalMod
         float n = 0.0F;
         if (livingEntity.isFallFlying()) {
             float o = 1.0F;
-            Vec3d vec3d = livingEntity.getVelocity();
-            if (vec3d.y < 0.0) {
-                Vec3d vec3d2 = vec3d.normalize();
-                o = 1.0F - (float)Math.pow(-vec3d2.y, 1.5);
+            Vec3d velocity = livingEntity.getVelocity();
+            if (velocity.y < 0.0) {
+                Vec3d velocityDirection = velocity.normalize();
+                o = 1.0F - (float)Math.pow(-velocityDirection.y, 1.5);
             }
 
             k = o * (float) (Math.PI / 9) + (1.0F - o) * k;

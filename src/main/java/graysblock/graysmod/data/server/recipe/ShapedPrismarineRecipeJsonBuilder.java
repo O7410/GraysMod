@@ -2,19 +2,19 @@ package graysblock.graysmod.data.server.recipe;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
-
+import graysblock.graysmod.recipe.RawShapedPrismarineRecipe;
 import graysblock.graysmod.recipe.ShapedPrismarineRecipe;
 import net.minecraft.advancement.Advancement;
 import net.minecraft.advancement.AdvancementCriterion;
 import net.minecraft.advancement.AdvancementRequirements;
 import net.minecraft.advancement.AdvancementRewards;
 import net.minecraft.advancement.criterion.RecipeUnlockedCriterion;
+import net.minecraft.data.server.recipe.CraftingRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.ItemStack;
 import net.minecraft.recipe.Ingredient;
-import net.minecraft.recipe.RawShapedRecipe;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
@@ -25,13 +25,13 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-public class ShapedPrismarineRecipeJsonBuilder implements PrismarineRecipeJsonBuilder {
+public class ShapedPrismarineRecipeJsonBuilder implements CraftingRecipeJsonBuilder {
     private final RecipeCategory category;
     private final Item output;
     private final int count;
     private final List<String> pattern = Lists.newArrayList();
     private final Map<Character, Ingredient> inputs = Maps.newLinkedHashMap();
-    private final Map<String, AdvancementCriterion<?>> criteria = new LinkedHashMap();
+    private final Map<String, AdvancementCriterion<?>> criteria = new LinkedHashMap<>();
     @Nullable private String group;
     private boolean showNotification = true;
 
@@ -99,7 +99,7 @@ public class ShapedPrismarineRecipeJsonBuilder implements PrismarineRecipeJsonBu
 
     @Override
     public void offerTo(RecipeExporter exporter, Identifier recipeId) {
-        RawShapedRecipe rawShapedRecipe = this.validate(recipeId);
+        RawShapedPrismarineRecipe rawShapedPrismarineRecipe = this.validate(recipeId);
         Advancement.Builder builder = exporter.getAdvancementBuilder()
                 .criterion("has_the_recipe", RecipeUnlockedCriterion.create(recipeId))
                 .rewards(AdvancementRewards.Builder.recipe(recipeId))
@@ -107,19 +107,19 @@ public class ShapedPrismarineRecipeJsonBuilder implements PrismarineRecipeJsonBu
         this.criteria.forEach(builder::criterion);
         ShapedPrismarineRecipe shapedPrismarineRecipe = new ShapedPrismarineRecipe(
                 Objects.requireNonNullElse(this.group, ""),
-                PrismarineRecipeJsonBuilder.toCraftingCategory(this.category),
-                rawShapedRecipe,
+                CraftingRecipeJsonBuilder.toCraftingCategory(this.category),
+                rawShapedPrismarineRecipe,
                 new ItemStack(this.output, this.count),
                 this.showNotification
         );
         exporter.accept(recipeId, shapedPrismarineRecipe, builder.build(recipeId.withPrefixedPath("recipes/" + this.category.getName() + "/")));
     }
 
-    private RawShapedRecipe validate(Identifier recipeId) {
+    private RawShapedPrismarineRecipe validate(Identifier recipeId) {
         if (this.criteria.isEmpty()) {
             throw new IllegalStateException("No way of obtaining recipe " + recipeId);
         } else {
-            return RawShapedRecipe.create(this.inputs, this.pattern);
+            return RawShapedPrismarineRecipe.create(this.inputs, this.pattern);
         }
     }
 }

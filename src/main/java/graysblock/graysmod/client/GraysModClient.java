@@ -10,20 +10,19 @@ import graysblock.graysmod.client.render.entity.CluckshroomEntityRenderer;
 import graysblock.graysmod.client.render.entity.feature.MakeshiftWingsFeatureRenderer;
 import graysblock.graysmod.client.render.entity.model.GraysModEntityModelLayers;
 import graysblock.graysmod.entity.GraysModEntityTypes;
+import graysblock.graysmod.item.GraysModItems;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
+import net.fabricmc.fabric.api.client.rendering.v1.LivingEntityFeatureRenderEvents;
 import net.fabricmc.fabric.api.client.rendering.v1.LivingEntityFeatureRendererRegistrationCallback;
 import net.minecraft.client.gui.screen.ingame.HandledScreens;
 import net.minecraft.client.render.RenderLayer;
-import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.render.entity.FlyingItemEntityRenderer;
-import net.minecraft.client.render.entity.LivingEntityRenderer;
 import net.minecraft.client.render.entity.model.ArmorStandEntityModel;
 import net.minecraft.client.render.entity.model.BipedEntityModel;
 import net.minecraft.client.render.entity.model.PlayerEntityModel;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.EquipmentSlot;
 
 public class GraysModClient implements ClientModInitializer {
 
@@ -36,12 +35,16 @@ public class GraysModClient implements ClientModInitializer {
         registerScreens();
         registerBlockRenderLayers();
 
-        LivingEntityFeatureRendererRegistrationCallback.EVENT.register(((EntityType<? extends LivingEntity> entityType, LivingEntityRenderer<?, ?> entityRenderer, LivingEntityFeatureRendererRegistrationCallback.RegistrationHelper registrationHelper, EntityRendererFactory.Context context) -> {
-            if(entityRenderer.getModel() instanceof PlayerEntityModel || entityRenderer.getModel() instanceof BipedEntityModel || entityRenderer.getModel() instanceof ArmorStandEntityModel) {
+
+        LivingEntityFeatureRendererRegistrationCallback.EVENT.register((entityType, entityRenderer, registrationHelper, context) -> {
+            if (entityRenderer.getModel() instanceof PlayerEntityModel || entityRenderer.getModel() instanceof BipedEntityModel || entityRenderer.getModel() instanceof ArmorStandEntityModel) {
                 registrationHelper.register(new MakeshiftWingsFeatureRenderer<>(entityRenderer, context.getModelLoader()));
             }
-        }));
+        });
+
+        LivingEntityFeatureRenderEvents.ALLOW_CAPE_RENDER.register(player -> !player.getEquippedStack(EquipmentSlot.CHEST).isOf(GraysModItems.MAKESHIFT_WINGS));
     }
+
     private void registerEntityRenderers() {
         EntityRendererRegistry.register(GraysModEntityTypes.BALL_OF_REPULSION_GEL, FlyingItemEntityRenderer::new);
         EntityRendererRegistry.register(GraysModEntityTypes.CLUCKSHROOM, CluckshroomEntityRenderer::new);
@@ -49,8 +52,8 @@ public class GraysModClient implements ClientModInitializer {
     }
 
     private void registerScreens() {
-        HandledScreens.register(GraysModScreenHandlerTypes.KILN_SCREEN_HANDLER, KilnScreen::new);
-        HandledScreens.register(GraysModScreenHandlerTypes.PRISMARINE_WORKBENCH_SCREEN_HANDLER, PrismarineWorkbenchScreen::new);
+        HandledScreens.register(GraysModScreenHandlerTypes.KILN, KilnScreen::new);
+        HandledScreens.register(GraysModScreenHandlerTypes.PRISMARINE_WORKBENCH, PrismarineWorkbenchScreen::new);
     }
 
     private void registerBlockRenderLayers() {

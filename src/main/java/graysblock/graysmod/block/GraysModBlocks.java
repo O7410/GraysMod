@@ -19,7 +19,7 @@ public class GraysModBlocks {
 
     public static final Block KILN = registerBlock("kiln", new KilnBlock(AbstractBlock.Settings.create().mapColor(MapColor.STONE_GRAY).instrument(NoteBlockInstrument.BASS).requiresTool().strength(3.5F).luminance(createLightLevelFromLitBlockState(13))));
     public static final Block PRISMARINE_WORKBENCH = registerBlock("prismarine_workbench", new PrismarineWorkbenchBlock(AbstractBlock.Settings.create().mapColor(MapColor.DIAMOND_BLUE).instrument(NoteBlockInstrument.BASEDRUM).strength(1.5F, 6.0F)));
-    public static final Block REPULSION_GEL = registerBlock("repulsion_gel", new RepulsionGelBlock(AbstractBlock.Settings.create().mapColor(MapColor.DIAMOND_BLUE).nonOpaque().replaceable().dropsNothing().strength(0.2F).sounds(BlockSoundGroup.SLIME).pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block REPULSION_GEL = registerBlock("repulsion_gel", new RepulsionGelBlock(AbstractBlock.Settings.create().mapColor(MapColor.DIAMOND_BLUE).noCollision().nonOpaque().replaceable().dropsNothing().strength(0.2F).sounds(BlockSoundGroup.SLIME).pistonBehavior(PistonBehavior.DESTROY)));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

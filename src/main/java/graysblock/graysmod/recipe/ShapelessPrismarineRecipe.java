@@ -59,16 +59,17 @@ public class ShapelessPrismarineRecipe implements PrismarineCraftingRecipe {
         return this.ingredients;
     }
 
+    @Override
     public boolean matches(CraftingRecipeInput craftingRecipeInput, World world) {
         if (craftingRecipeInput.getStackCount() != this.ingredients.size()) {
             return false;
-        } else {
-            return craftingRecipeInput.getSize() == 1 && this.ingredients.size() == 1
-                    ? ((Ingredient)this.ingredients.getFirst()).test(craftingRecipeInput.getStackInSlot(0))
-                    : craftingRecipeInput.getRecipeMatcher().match(this, null);
         }
+        return craftingRecipeInput.getSize() == 1 && this.ingredients.size() == 1
+                ? this.ingredients.getFirst().test(craftingRecipeInput.getStackInSlot(0))
+                : craftingRecipeInput.getRecipeMatcher().match(this, null);
     }
 
+    @Override
     public ItemStack craft(CraftingRecipeInput craftingRecipeInput, RegistryWrapper.WrapperLookup wrapperLookup) {
         return this.result.copy();
     }
@@ -87,17 +88,16 @@ public class ShapelessPrismarineRecipe implements PrismarineCraftingRecipe {
                                 Ingredient.DISALLOW_EMPTY_CODEC
                                         .listOf()
                                         .fieldOf("ingredients")
-                                        .flatXmap(
-                                                ingredients -> {
-                                                    Ingredient[] ingredients2 = (Ingredient[])ingredients.stream().filter(ingredient -> !ingredient.isEmpty()).toArray(i -> new Ingredient[i]);
-                                                    if (ingredients2.length == 0) {
-                                                        return DataResult.error(() -> "No ingredients for shapeless recipe");
-                                                    } else {
-                                                        return ingredients2.length > 9
-                                                                ? DataResult.error(() -> "Too many ingredients for shapeless recipe")
-                                                                : DataResult.success(DefaultedList.<Ingredient>copyOf(Ingredient.EMPTY, ingredients2));
-                                                    }
-                                                },
+                                        .flatXmap(ingredients -> {
+                                            Ingredient[] nonEmptyIngredientsArray = ingredients.stream().filter(ingredient -> !ingredient.isEmpty()).toArray(Ingredient[]::new);
+                                            if (nonEmptyIngredientsArray.length == 0) {
+                                                return DataResult.error(() -> "No ingredients for shapeless recipe");
+                                            } else {
+                                                return nonEmptyIngredientsArray.length > 9
+                                                        ? DataResult.error(() -> "Too many ingredients for shapeless recipe")
+                                                        : DataResult.success(DefaultedList.copyOf(Ingredient.EMPTY, nonEmptyIngredientsArray));
+                                            }
+                                            },
                                                 DataResult::success
                                         )
                                         .forGetter(recipe -> recipe.ingredients)

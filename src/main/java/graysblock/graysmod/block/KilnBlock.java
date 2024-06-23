@@ -11,7 +11,6 @@ import net.minecraft.block.entity.BlockEntityTicker;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.particle.ParticleTypes;
-import net.minecraft.screen.NamedScreenHandlerFactory;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.math.BlockPos;
@@ -23,13 +22,13 @@ import org.jetbrains.annotations.Nullable;
 public class KilnBlock extends AbstractFurnaceBlock {
     public static final MapCodec<KilnBlock> CODEC = createCodec(KilnBlock::new);
 
+    public KilnBlock(AbstractBlock.Settings settings) {
+        super(settings);
+    }
+
     @Override
     public MapCodec<KilnBlock> getCodec() {
         return CODEC;
-    }
-
-    public KilnBlock(AbstractBlock.Settings settings) {
-        super(settings);
     }
 
     @Override
@@ -46,28 +45,30 @@ public class KilnBlock extends AbstractFurnaceBlock {
     @Override
     protected void openScreen(World world, BlockPos pos, PlayerEntity player) {
         BlockEntity blockEntity = world.getBlockEntity(pos);
-        if(blockEntity instanceof KilnBlockEntity) {
-            player.openHandledScreen((NamedScreenHandlerFactory) blockEntity);
+        if (blockEntity instanceof KilnBlockEntity kilnBlockEntity) {
+            player.openHandledScreen(kilnBlockEntity);
         }
     }
 
     @Override
     public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
-        if(state.get(LIT)) {
-            double d = (double)pos.getX() + 0.5;
-            double e = pos.getY();
-            double f = (double)pos.getZ() + 0.5;
+        if (state.get(LIT)) {
+
+            double centerX = (double) pos.getX() + 0.5;
+            double centerY = pos.getY();
+            double centerZ = (double) pos.getZ() + 0.5;
             if (random.nextDouble() < 0.1) {
-                world.playSound(d, e, f, SoundEvents.BLOCK_FURNACE_FIRE_CRACKLE, SoundCategory.BLOCKS, 1.0F, 1.0F, false);
+                world.playSound(centerX, centerY, centerZ, SoundEvents.BLOCK_FURNACE_FIRE_CRACKLE, SoundCategory.BLOCKS, 1.0F, 1.0F, false);
             }
 
             Direction direction = state.get(FACING);
             Direction.Axis axis = direction.getAxis();
-            double h = random.nextDouble() * 0.6 - 0.3;
-            double i = axis == Direction.Axis.X ? (double)direction.getOffsetX() * 0.52 : h;
-            double j = random.nextDouble() * 9.0 / 16.0;
-            double k = axis == Direction.Axis.Z ? (double)direction.getOffsetZ() * 0.52 : h;
-            world.addParticle(ParticleTypes.SMOKE, d + i, e + j, f + k, 0.0, 0.0, 0.0);
+            double backFrontOffset = random.nextDouble() * 0.6 - 0.3;
+            double verticalOffset = random.nextDouble() * 9.0 / 16.0;
+
+            double xOffset = axis == Direction.Axis.X ? direction.getOffsetX() * 0.52 : backFrontOffset;
+            double zOffset = axis == Direction.Axis.Z ? direction.getOffsetZ() * 0.52 : backFrontOffset;
+            world.addParticle(ParticleTypes.SMOKE, centerX + xOffset, centerY + verticalOffset, centerZ + zOffset, 0.0, 0.0, 0.0);
         }
     }
 }

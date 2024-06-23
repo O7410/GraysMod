@@ -14,6 +14,7 @@ import net.minecraft.network.packet.s2c.play.ScreenHandlerSlotUpdateS2CPacket;
 import net.minecraft.recipe.*;
 import net.minecraft.recipe.book.RecipeBookCategory;
 import net.minecraft.recipe.input.CraftingRecipeInput;
+import net.minecraft.screen.AbstractRecipeScreenHandler;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.screen.ScreenHandlerContext;
 import net.minecraft.screen.slot.CraftingResultSlot;
@@ -25,7 +26,8 @@ import net.minecraft.world.World;
 import java.util.Optional;
 
 // currently ScreenHandler instead of AbstractRecipeScreenHandler<CraftingRecipeInput, PrismarineCraftingRecipe> because recipe category thing
-public class PrismarineWorkbenchScreenHandler extends ScreenHandler {
+//public class PrismarineWorkbenchScreenHandler extends ScreenHandler {
+public class PrismarineWorkbenchScreenHandler extends AbstractRecipeScreenHandler<CraftingRecipeInput, Recipe<CraftingRecipeInput>> {
     public static final int RESULT_ID = 0;
     private static final int INPUT_START = 1;
     private static final int INPUT_END = 10;
@@ -45,7 +47,7 @@ public class PrismarineWorkbenchScreenHandler extends ScreenHandler {
     }
 
     public PrismarineWorkbenchScreenHandler(int syncId, PlayerInventory playerInventory, ScreenHandlerContext context) {
-        super(GraysModScreenHandlerTypes.PRISMARINE_WORKBENCH_SCREEN_HANDLER, syncId);
+        super(GraysModScreenHandlerTypes.PRISMARINE_WORKBENCH, syncId);
         this.context = context;
         this.player = playerInventory.player;
 
@@ -111,7 +113,6 @@ public class PrismarineWorkbenchScreenHandler extends ScreenHandler {
 
         CraftingRecipeInput craftingRecipeInput = craftingInventory.createRecipeInput();
         ItemStack resultStack = ItemStack.EMPTY;
-        // todo
 
         RecipeManager recipeManager = world.getRecipeManager();
 
@@ -226,32 +227,32 @@ public class PrismarineWorkbenchScreenHandler extends ScreenHandler {
         return slot.inventory != this.result && super.canInsertIntoSlot(stack, slot);
     }
 
-    //    @Override
+    @Override
     public int getCraftingResultSlotIndex() {
         return 0;
     }
 
-    //    @Override
+    @Override
     public int getCraftingWidth() {
         return this.input.getWidth();
     }
 
-    //    @Override
+    @Override
     public int getCraftingHeight() {
         return this.input.getHeight();
     }
 
-    //    @Override
+    @Override
     public int getCraftingSlotCount() {
         return 10;
     }
 
-    //    @Override
+    @Override
     public RecipeBookCategory getCategory() {
-        return RecipeBookCategory.CRAFTING; // TODO: if you want the recipe book to work, you need a custom recipe book category with mixin
+        return RecipeBookCategory.valueOf("PRISMARINE_CRAFTING"); // TODO: if you want the recipe book to work, you need a custom recipe book category with mixin
     }
 
-    //    @Override
+    @Override
     public boolean canInsertIntoSlot(int index) {
         return index != this.getCraftingResultSlotIndex();
     }

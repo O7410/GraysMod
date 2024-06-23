@@ -30,7 +30,7 @@ public class FiringRecipeJsonBuilder implements CraftingRecipeJsonBuilder {
     private final Ingredient input;
     private final float experience;
     private final int cookingTime;
-    private final Map<String, AdvancementCriterion<?>> criteria = new LinkedHashMap();
+    private final Map<String, AdvancementCriterion<?>> criteria = new LinkedHashMap<>();
     private String group;
     private final AbstractCookingRecipe.RecipeFactory<?> recipeFactory;
 
