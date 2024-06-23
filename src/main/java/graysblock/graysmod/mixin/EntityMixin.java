@@ -19,7 +19,7 @@ public abstract class EntityMixin {
     private void shadowCollisionChange(BlockPos pos, BlockState state, CallbackInfoReturnable<Boolean> cir) {
         if((Entity) (Object) this instanceof PlayerEntity player) {
             if(player instanceof ServerPlayerEntity serverPlayer) {
-                if(serverPlayer.hasStatusEffect(GraysModStatusEffects.SHADOW) && state.isIn(GraysModBlockTags.SHADOW_PASSES_THROUGH)) {
+                if(serverPlayer.hasStatusEffect(GraysModStatusEffects.SHADOW_FORM) && state.isIn(GraysModBlockTags.SHADOW_FORM_PASSES_THROUGH)) {
                     cir.setReturnValue(false);
                 }
             }

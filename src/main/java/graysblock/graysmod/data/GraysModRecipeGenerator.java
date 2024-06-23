@@ -2,6 +2,7 @@ package graysblock.graysmod.data;
 
 import graysblock.graysmod.block.GraysModBlocks;
 import graysblock.graysmod.data.server.recipe.FiringRecipeJsonBuilder;
+import graysblock.graysmod.data.server.recipe.PrismarineRecipeJsonBuilder;
 import graysblock.graysmod.data.server.recipe.ShapedPrismarineRecipeJsonBuilder;
 import graysblock.graysmod.item.GraysModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -84,16 +85,6 @@ public class GraysModRecipeGenerator extends FabricRecipeProvider {
                         FabricRecipeProvider.conditionsFromItem(Items.HONEYCOMB))
                 .offerTo(exporter);
 
-        ShapedPrismarineRecipeJsonBuilder.create(RecipeCategory.COMBAT, GraysModItems.PRISMARINE_SWORD)
-                .pattern("p")
-                .pattern("p")
-                .pattern("s")
-                .input('p', Items.PRISMARINE_SHARD)
-                .input('s', Items.STICK)
-                .criterion(FabricRecipeProvider.hasItem(Items.PRISMARINE_SHARD),
-                        FabricRecipeProvider.conditionsFromItem(Items.PRISMARINE_SHARD))
-                .offerTo(exporter);
-
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, GraysModItems.WIND_BOLT, 4)
                 .pattern("c")
                 .pattern("b")
@@ -105,7 +96,30 @@ public class GraysModRecipeGenerator extends FabricRecipeProvider {
                         FabricRecipeProvider.conditionsFromItem(Items.BREEZE_ROD))
                 .offerTo(exporter);
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, GraysModBlocks.PRISMARINE_WORKBENCH)
+                .pattern("ppp")
+                .pattern("scs")
+                .pattern("sss")
+                .input('p', GraysModItems.PEARL)
+                .input('s', Items.PRISMARINE_SHARD)
+                .input('c', Items.CRAFTING_TABLE)
+                .criterion(FabricRecipeProvider.hasItem(Items.PRISMARINE_SHARD),
+                        FabricRecipeProvider.conditionsFromItem(Items.PRISMARINE_SHARD))
+                .offerTo(exporter);
 
+        createPrismarineRecipes(exporter);
+        createKilnRecipes(exporter);
+    }
+
+    private void createKilnRecipe(RecipeExporter exporter, Ingredient input, RecipeCategory category, Item output, float experience, int cookingTime) {
+        String outputName = Registries.ITEM.getId(output).getPath();
+
+        FiringRecipeJsonBuilder.createFiring(input, category, output, experience, cookingTime)
+                .criterion(FabricRecipeProvider.hasItem(output), conditionsFromItem(output))
+                .offerTo(exporter, Identifier.of(outputName + "_from_firing"));
+    }
+
+    private void createKilnRecipes(RecipeExporter exporter) {
         createKilnRecipe(exporter, Ingredient.fromTag(ItemTags.SMELTS_TO_GLASS), RecipeCategory.BUILDING_BLOCKS, Blocks.GLASS.asItem(), 0.1F, 100);
         createKilnRecipe(exporter, Ingredient.ofItems(Blocks.WHITE_TERRACOTTA), RecipeCategory.DECORATIONS, Blocks.WHITE_GLAZED_TERRACOTTA.asItem(), 0.1F, 100);
         createKilnRecipe(exporter, Ingredient.ofItems(Blocks.LIGHT_GRAY_TERRACOTTA), RecipeCategory.DECORATIONS, Blocks.LIGHT_GRAY_GLAZED_TERRACOTTA.asItem(), 0.1F, 100);
@@ -140,11 +154,153 @@ public class GraysModRecipeGenerator extends FabricRecipeProvider {
         createKilnRecipe(exporter, Ingredient.ofItems(Blocks.NETHERRACK), RecipeCategory.MISC, Items.NETHER_BRICK, 0.1F, 100);
     }
 
-    private void createKilnRecipe(RecipeExporter exporter, Ingredient input, RecipeCategory category, Item output, float experience, int cookingTime) {
-        String outputName = Registries.ITEM.getId(output).getPath();
+    private void createPrismarineRecipes(RecipeExporter exporter) {
+        ShapedPrismarineRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.DARK_PRISMARINE)
+                .input('S', Items.PRISMARINE_SHARD)
+                .input('I', Items.BLACK_DYE)
+                .pattern("SSS")
+                .pattern("SIS")
+                .pattern("SSS")
+                .criterion("has_prismarine_shard", conditionsFromItem(Items.PRISMARINE_SHARD))
+                .offerTo(exporter);
 
-        FiringRecipeJsonBuilder.createFiring(input, category, output, experience, cookingTime)
-                .criterion(FabricRecipeProvider.hasItem(output), conditionsFromItem(output))
-                .offerTo(exporter, Identifier.of(outputName + "_from_firing"));
+        PrismarineRecipeJsonBuilder.offer2x2CompactingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.PRISMARINE, Items.PRISMARINE_SHARD);
+        PrismarineRecipeJsonBuilder.offerCompactingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.PRISMARINE_BRICKS, Items.PRISMARINE_SHARD);
+
+        ShapedPrismarineRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.SEA_LANTERN)
+                .input('S', Items.PRISMARINE_SHARD)
+                .input('C', Items.PRISMARINE_CRYSTALS)
+                .pattern("SCS")
+                .pattern("CCC")
+                .pattern("SCS")
+                .criterion("has_prismarine_crystals", conditionsFromItem(Items.PRISMARINE_CRYSTALS))
+                .offerTo(exporter);
+
+        ShapedPrismarineRecipeJsonBuilder.create(RecipeCategory.COMBAT, GraysModItems.PRISMARINE_SWORD)
+                .pattern("p")
+                .pattern("p")
+                .pattern("s")
+                .input('p', Items.PRISMARINE_SHARD)
+                .input('s', Items.STICK)
+                .criterion(FabricRecipeProvider.hasItem(Items.PRISMARINE_SHARD),
+                        FabricRecipeProvider.conditionsFromItem(Items.PRISMARINE_SHARD))
+                .offerTo(exporter);
+
+        ShapedPrismarineRecipeJsonBuilder.create(RecipeCategory.TOOLS, GraysModItems.PRISMARINE_PICKAXE)
+                .pattern("ppp")
+                .pattern(" s ")
+                .pattern(" s ")
+                .input('p', Items.PRISMARINE_SHARD)
+                .input('s', Items.STICK)
+                .criterion(FabricRecipeProvider.hasItem(Items.PRISMARINE_SHARD),
+                        FabricRecipeProvider.conditionsFromItem(Items.PRISMARINE_SHARD))
+                .offerTo(exporter);
+
+        ShapedPrismarineRecipeJsonBuilder.create(RecipeCategory.TOOLS, GraysModItems.PRISMARINE_AXE)
+                .pattern("pp")
+                .pattern("ps")
+                .pattern(" s")
+                .input('p', Items.PRISMARINE_SHARD)
+                .input('s', Items.STICK)
+                .criterion(FabricRecipeProvider.hasItem(Items.PRISMARINE_SHARD),
+                        FabricRecipeProvider.conditionsFromItem(Items.PRISMARINE_SHARD))
+                .offerTo(exporter);
+
+        ShapedPrismarineRecipeJsonBuilder.create(RecipeCategory.TOOLS, GraysModItems.PRISMARINE_SHOVEL)
+                .pattern("p")
+                .pattern("s")
+                .pattern("s")
+                .input('p', Items.PRISMARINE_SHARD)
+                .input('s', Items.STICK)
+                .criterion(FabricRecipeProvider.hasItem(Items.PRISMARINE_SHARD),
+                        FabricRecipeProvider.conditionsFromItem(Items.PRISMARINE_SHARD))
+                .offerTo(exporter);
+
+        ShapedPrismarineRecipeJsonBuilder.create(RecipeCategory.TOOLS, GraysModItems.PRISMARINE_HOE)
+                .pattern("pp")
+                .pattern(" s")
+                .pattern(" s")
+                .input('p', Items.PRISMARINE_SHARD)
+                .input('s', Items.STICK)
+                .criterion(FabricRecipeProvider.hasItem(Items.PRISMARINE_SHARD),
+                        FabricRecipeProvider.conditionsFromItem(Items.PRISMARINE_SHARD))
+                .offerTo(exporter);
+
+        ShapedPrismarineRecipeJsonBuilder.create(RecipeCategory.TOOLS, Items.DIAMOND_AXE)
+                .input('#', Items.STICK)
+                .input('X', Items.DIAMOND)
+                .pattern("XX")
+                .pattern("X#")
+                .pattern(" #")
+                .criterion("has_diamond", conditionsFromItem(Items.DIAMOND))
+                .offerTo(exporter);
+
+        ShapedPrismarineRecipeJsonBuilder.create(RecipeCategory.COMBAT, Items.DIAMOND_BOOTS)
+                .input('X', Items.DIAMOND)
+                .pattern("X X")
+                .pattern("X X")
+                .criterion("has_diamond", conditionsFromItem(Items.DIAMOND))
+                .offerTo(exporter);
+
+        ShapedPrismarineRecipeJsonBuilder.create(RecipeCategory.COMBAT, Items.DIAMOND_CHESTPLATE)
+                .input('X', Items.DIAMOND)
+                .pattern("X X")
+                .pattern("XXX")
+                .pattern("XXX")
+                .criterion("has_diamond", conditionsFromItem(Items.DIAMOND))
+                .offerTo(exporter);
+
+        ShapedPrismarineRecipeJsonBuilder.create(RecipeCategory.COMBAT, Items.DIAMOND_HELMET)
+                .input('X', Items.DIAMOND)
+                .pattern("XXX")
+                .pattern("X X")
+                .criterion("has_diamond", conditionsFromItem(Items.DIAMOND))
+                .offerTo(exporter);
+
+        ShapedPrismarineRecipeJsonBuilder.create(RecipeCategory.TOOLS, Items.DIAMOND_HOE)
+                .input('#', Items.STICK)
+                .input('X', Items.DIAMOND)
+                .pattern("XX")
+                .pattern(" #")
+                .pattern(" #")
+                .criterion("has_diamond", conditionsFromItem(Items.DIAMOND))
+                .offerTo(exporter);
+
+        ShapedPrismarineRecipeJsonBuilder.create(RecipeCategory.COMBAT, Items.DIAMOND_LEGGINGS)
+                .input('X', Items.DIAMOND)
+                .pattern("XXX")
+                .pattern("X X")
+                .pattern("X X")
+                .criterion("has_diamond", conditionsFromItem(Items.DIAMOND))
+                .offerTo(exporter);
+
+        ShapedPrismarineRecipeJsonBuilder.create(RecipeCategory.TOOLS, Items.DIAMOND_PICKAXE)
+                .input('#', Items.STICK)
+                .input('X', Items.DIAMOND)
+                .pattern("XXX")
+                .pattern(" # ")
+                .pattern(" # ")
+                .criterion("has_diamond", conditionsFromItem(Items.DIAMOND))
+                .offerTo(exporter);
+
+        ShapedPrismarineRecipeJsonBuilder.create(RecipeCategory.TOOLS, Items.DIAMOND_SHOVEL)
+                .input('#', Items.STICK)
+                .input('X', Items.DIAMOND)
+                .pattern("X")
+                .pattern("#")
+                .pattern("#")
+                .criterion("has_diamond", conditionsFromItem(Items.DIAMOND))
+                .offerTo(exporter);
+
+        ShapedPrismarineRecipeJsonBuilder.create(RecipeCategory.COMBAT, Items.DIAMOND_SWORD)
+                .input('#', Items.STICK)
+                .input('X', Items.DIAMOND)
+                .pattern("X")
+                .pattern("X")
+                .pattern("#")
+                .criterion("has_diamond", conditionsFromItem(Items.DIAMOND))
+                .offerTo(exporter);
+
+        PrismarineRecipeJsonBuilder.offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, Items.DIAMOND, RecipeCategory.BUILDING_BLOCKS, Items.DIAMOND_BLOCK);
     }
 }

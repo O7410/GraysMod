@@ -29,7 +29,7 @@ public class GraysModBlockTagGenerator extends FabricTagProvider.BlockTagProvide
         getOrCreateTagBuilder(GraysModBlockTags.INCORRECT_FOR_PRISMARINE_TOOL)
                 .forceAddTag(BlockTags.NEEDS_DIAMOND_TOOL);
 
-        getOrCreateTagBuilder(GraysModBlockTags.SHADOW_PASSES_THROUGH)
+        getOrCreateTagBuilder(GraysModBlockTags.SHADOW_FORM_PASSES_THROUGH)
                 .forceAddTag(BlockTags.FIRE)
                 .forceAddTag(BlockTags.CAMPFIRES)
                 .forceAddTag(BlockTags.ALL_HANGING_SIGNS)

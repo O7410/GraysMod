@@ -5,6 +5,7 @@ import graysblock.graysmod.component.type.GraysModFoodComponents;
 import graysblock.graysmod.entity.GraysModEntityTypes;
 import graysblock.graysmod.item.vials.VialOfRecollectionItem;
 import graysblock.graysmod.item.vials.VialOfShadowsItem;
+import graysblock.graysmod.item.vials.VialOfTitansItem;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -17,6 +18,7 @@ public class GraysModItems {
     public static final Item ECHO_VIAL = registerItem("echo_vial", new Item(new Item.Settings().rarity(Rarity.RARE)));
     public static final Item MAKESHIFT_WINGS = registerItem("makeshift_wings", new MakeshiftWingsItem(new Item.Settings().maxDamage(60)));
     public static final Item HOT_POCKET = registerItem("hot_pocket", new HotPocketItem(new Item.Settings().food(GraysModFoodComponents.HOT_POCKET)));
+    public static final Item PEARL = registerItem("pearl", new Item(new Item.Settings()));
     public static final Item PIGLIN_WAR_AXE = registerItem("piglin_war_axe", new GuildedSwordItem(GraysModToolMaterials.GUILDED, (new Item.Settings()).fireproof().attributeModifiers(GuildedSwordItem.createAttributeModifiers(GraysModToolMaterials.GUILDED, 4, -2.75f))));
     public static final Item PRISMARINE_AXE = registerItem("prismarine_axe", new AxeItem(GraysModToolMaterials.PRISMARINE, (new Item.Settings().attributeModifiers(AxeItem.createAttributeModifiers(GraysModToolMaterials.PRISMARINE, 6.0F, -3.0F)))));
     public static final Item PRISMARINE_HOE = registerItem("prismarine_hoe", new HoeItem(GraysModToolMaterials.PRISMARINE, (new Item.Settings().attributeModifiers(HoeItem.createAttributeModifiers(GraysModToolMaterials.PRISMARINE, -2.0F, -1.0F)))));
@@ -31,6 +33,7 @@ public class GraysModItems {
     public static final Item TURTLE_TROUSERS = registerItem("turtle_trousers", new ArmorItem(GraysModArmorMaterials.TURTLE, ArmorItem.Type.LEGGINGS, new Item.Settings().maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(25))));
     public static final Item VIAL_OF_RECOLLECTION = registerItem("vial_of_recollection", new VialOfRecollectionItem(new Item.Settings().maxCount(16).rarity(Rarity.RARE)));
     public static final Item VIAL_OF_SHADOWS = registerItem("vial_of_shadows", new VialOfShadowsItem(new Item.Settings().maxCount(16).rarity(Rarity.RARE)));
+    public static final Item VIAL_OF_TITANS = registerItem("vial_of_titans", new VialOfTitansItem(new Item.Settings().maxCount(16).rarity(Rarity.RARE)));
     public static final Item WIND_BOLT = registerItem("wind_bolt", new WindBoltItem(new Item.Settings().rarity(Rarity.UNCOMMON)));
 
     public static final Item BOULDERING_ZOMBIE_SPAWN_EGG = registerItem("bouldering_zombie_spawn_egg", new SpawnEggItem(GraysModEntityTypes.BOULDERING_ZOMBIE, 0x4d575a, 0x492320, new Item.Settings()));

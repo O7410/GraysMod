@@ -1,0 +1,13 @@
+{
+  "type": "graysmod:shapeless_prismarine",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:diamond_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "minecraft:diamond"
+  }
+}

@@ -6,7 +6,6 @@ import net.minecraft.advancement.criterion.Criteria;
 import net.minecraft.component.type.PotionContentsComponent;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -37,7 +36,7 @@ public class VialOfShadowsItem extends Item {
 
         if (!world.isClient) {
             world.playSound(null, user.getBlockPos(), GraysModSoundEvents.ITEM_VIAL_DISPOSE, user.getSoundCategory(), 1.0F, 1.0F);
-            user.addStatusEffect(new StatusEffectInstance(GraysModStatusEffects.SHADOW, 3600, 0));
+            user.addStatusEffect(new StatusEffectInstance(GraysModStatusEffects.SHADOW_FORM, 3600, 0));
         }
 
         stack.decrementUnlessCreative(1, user);
@@ -62,7 +61,7 @@ public class VialOfShadowsItem extends Item {
     @Override
     public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType type) {
         super.appendTooltip(stack, context, tooltip, type);
-        List<StatusEffectInstance> list = List.of(new StatusEffectInstance(GraysModStatusEffects.SHADOW, 3600, 0));
+        List<StatusEffectInstance> list = List.of(new StatusEffectInstance(GraysModStatusEffects.SHADOW_FORM, 3600, 0));
         PotionContentsComponent.buildTooltip(list, tooltip::add, 1.0F, context.getUpdateTickRate());
     }
 }

@@ -3,9 +3,9 @@ package graysblock.graysmod.entity.effect;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
 
-public class ShadowStatusEffect extends StatusEffect {
+public class ShadowFormStatusEffect extends StatusEffect {
 
-    public ShadowStatusEffect() {
+    public ShadowFormStatusEffect() {
         super(StatusEffectCategory.BENEFICIAL, 0x27061E);
     }
 }

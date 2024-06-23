@@ -3,11 +3,11 @@
   "package": "graysblock.graysmod.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "EntityMixin",
     "GrindstoneScreenHandlerMixin",
     "GrindstoneScreenHandlerOutputMixin",
     "GrindstoneScreenHandlerSlotsMixin",
     "LivingEntityMixin",
-    "EntityMixin",
     "RecipeBookCategoryMixin"
   ],
   "injectors": {
@@ -15,6 +15,7 @@
   },
   "client": [
     "CapeFeatureRendererMixin",
-    "CatEntityRendererMixin"
+    "CatEntityRendererMixin",
+    "LivingEntityRendererMixin"
   ]
 }

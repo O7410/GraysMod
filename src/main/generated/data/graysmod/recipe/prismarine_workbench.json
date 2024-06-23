@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "c": {
+      "item": "minecraft:crafting_table"
+    },
+    "p": {
+      "item": "graysmod:pearl"
+    },
+    "s": {
+      "item": "minecraft:prismarine_shard"
+    }
+  },
+  "pattern": [
+    "ppp",
+    "scs",
+    "sss"
+  ],
+  "result": {
+    "count": 1,
+    "id": "graysmod:prismarine_workbench"
+  }
+}
