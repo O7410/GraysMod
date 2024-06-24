@@ -2,20 +2,20 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "b": {
+    "B": {
       "item": "minecraft:bricks"
     },
-    "f": {
+    "F": {
       "item": "minecraft:furnace"
     },
-    "s": {
+    "S": {
       "item": "minecraft:smooth_basalt"
     }
   },
   "pattern": [
-    "sss",
-    "bfb",
-    "bbb"
+    "SSS",
+    "BFB",
+    "BBB"
   ],
   "result": {
     "count": 1,

@@ -5,10 +5,7 @@ import graysblock.graysmod.block.GraysModBlocks;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
-import net.minecraft.registry.RegistryKey;
-import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.*;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
@@ -28,16 +25,21 @@ public class GraysModItemGroups {
                     entries.add(GraysModItems.PRISMARINE_AXE);
                     entries.add(GraysModItems.PRISMARINE_SHOVEL);
                     entries.add(GraysModItems.PRISMARINE_HOE);
+                    entries.add(GraysModItems.PEARL);
+                    entries.add(GraysModBlocks.PRISMARINE_WORKBENCH);
+                    entries.add(GraysModBlocks.KILN);
                     entries.add(GraysModItems.PIGLIN_WAR_AXE);
                     entries.add(GraysModItems.STRIDER_SCALE);
                     entries.add(GraysModItems.STRIDER_BOOTS);
                     entries.add(GraysModItems.STAFF_OF_REGROWTH);
-                    entries.add(GraysModItems.BOULDERING_ZOMBIE_SPAWN_EGG);
-                    entries.add(GraysModItems.CLUCKSHROOM_SPAWN_EGG);
-                    entries.add(GraysModBlocks.KILN);
-                    entries.add(GraysModBlocks.PRISMARINE_WORKBENCH);
+                    entries.add(GraysModItems.WIND_BOLT);
                     entries.add(GraysModItems.MAKESHIFT_WINGS);
                     entries.add(GraysModItems.BALL_OF_REPULSION_GEL);
+                    entries.add(GraysModItems.ECHO_VIAL);
+                    entries.add(GraysModItems.VIAL_OF_RECOLLECTION);
+                    entries.add(GraysModItems.VIAL_OF_SHADOWS);
+                    entries.add(GraysModItems.BOULDERING_ZOMBIE_SPAWN_EGG);
+                    entries.add(GraysModItems.CLUCKSHROOM_SPAWN_EGG);
                 }).build());
 
         GraysMod.LOGGER.info("Registering GraysMod Item Groups...");

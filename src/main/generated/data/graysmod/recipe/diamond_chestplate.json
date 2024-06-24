@@ -1,0 +1,18 @@
+{
+  "type": "graysmod:shaped_prismarine",
+  "category": "equipment",
+  "key": {
+    "X": {
+      "item": "minecraft:diamond"
+    }
+  },
+  "pattern": [
+    "X X",
+    "XXX",
+    "XXX"
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:diamond_chestplate"
+  }
+}

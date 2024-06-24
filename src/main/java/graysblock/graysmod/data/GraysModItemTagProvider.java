@@ -1,6 +1,7 @@
 package graysblock.graysmod.data;
 
 import graysblock.graysmod.item.GraysModItems;
+import graysblock.graysmod.registry.tag.GraysModItemTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryWrapper;
@@ -39,5 +40,12 @@ public class GraysModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
         getOrCreateTagBuilder(ItemTags.HOES)
                 .add(GraysModItems.PRISMARINE_HOE);
+
+        getOrCreateTagBuilder(ItemTags.ARROWS)
+                .add(GraysModItems.WIND_BOLT);
+
+        getOrCreateTagBuilder(GraysModItemTags.VIALS)
+                .add(GraysModItems.VIAL_OF_RECOLLECTION)
+                .add(GraysModItems.VIAL_OF_SHADOWS);
     }
 }

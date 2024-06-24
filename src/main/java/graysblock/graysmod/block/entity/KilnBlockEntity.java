@@ -1,6 +1,6 @@
 package graysblock.graysmod.block.entity;
 
-import graysblock.graysmod.client.gui.screen.KilnScreenHandler;
+import graysblock.graysmod.screen.KilnScreenHandler;
 import graysblock.graysmod.recipe.GraysModRecipeTypes;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.AbstractFurnaceBlockEntity;

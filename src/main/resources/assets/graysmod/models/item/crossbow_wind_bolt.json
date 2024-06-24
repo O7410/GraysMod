@@ -1,0 +1,6 @@
+{
+    "parent": "item/crossbow",
+    "textures": {
+        "layer0": "graysmod:item/crossbow_wind_bolt"
+    }
+}

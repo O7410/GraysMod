@@ -27,7 +27,9 @@ public class GraysModModelGenerator extends FabricModelProvider {
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(GraysModItems.BALL_OF_REPULSION_GEL, Models.GENERATED);
+        itemModelGenerator.register(GraysModItems.ECHO_VIAL, Models.GENERATED);
         itemModelGenerator.register(GraysModItems.HOT_POCKET, Models.GENERATED);
+        itemModelGenerator.register(GraysModItems.PEARL, Models.GENERATED);
         itemModelGenerator.register(GraysModItems.PIGLIN_WAR_AXE, Models.HANDHELD);
         itemModelGenerator.register(GraysModItems.PRISMARINE_AXE, Models.HANDHELD);
         itemModelGenerator.register(GraysModItems.PRISMARINE_HOE, Models.HANDHELD);
@@ -40,6 +42,10 @@ public class GraysModModelGenerator extends FabricModelProvider {
         itemModelGenerator.registerArmor((ArmorItem) GraysModItems.TURTLE_SHELL);
         itemModelGenerator.registerArmor((ArmorItem) GraysModItems.TURTLE_SHOES);
         itemModelGenerator.registerArmor((ArmorItem) GraysModItems.TURTLE_TROUSERS);
+        itemModelGenerator.register(GraysModItems.VIAL_OF_RECOLLECTION, Models.GENERATED);
+        itemModelGenerator.register(GraysModItems.VIAL_OF_SHADOWS, Models.GENERATED);
+        itemModelGenerator.register(GraysModItems.VIAL_OF_TITANS, Models.GENERATED);
+        itemModelGenerator.register(GraysModItems.WIND_BOLT, Models.GENERATED);
 
         itemModelGenerator.register(GraysModItems.BOULDERING_ZOMBIE_SPAWN_EGG, new Model(Optional.of(Identifier.ofVanilla("item/template_spawn_egg")), Optional.empty()));
         itemModelGenerator.register(GraysModItems.CLUCKSHROOM_SPAWN_EGG, new Model(Optional.of(Identifier.ofVanilla("item/template_spawn_egg")), Optional.empty()));

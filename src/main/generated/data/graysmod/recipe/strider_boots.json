@@ -2,13 +2,13 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "key": {
-    "s": {
+    "S": {
       "item": "graysmod:strider_scale"
     }
   },
   "pattern": [
-    "s s",
-    "s s"
+    "S S",
+    "S S"
   ],
   "result": {
     "count": 1,

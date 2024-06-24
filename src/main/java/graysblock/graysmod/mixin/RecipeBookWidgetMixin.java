@@ -1,7 +1,7 @@
 package graysblock.graysmod.mixin;
 
 import com.llamalad7.mixinextras.sugar.Local;
-import graysblock.graysmod.client.gui.screen.ingame.PrismarineWorkbenchScreen;
+import graysblock.graysmod.screen.PrismarineWorkbenchScreen;
 import graysblock.graysmod.recipe.PrismarineCraftingRecipe;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;

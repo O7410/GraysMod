@@ -20,9 +20,11 @@ public class GraysModLanguageProvider extends FabricLanguageProvider {
     public void generateTranslations(RegistryWrapper.WrapperLookup registryLookup, TranslationBuilder translationBuilder) {
         translationBuilder.add(GraysModItems.BALL_OF_REPULSION_GEL, "Ball of Repulsion Gel");
         translationBuilder.add(GraysModItems.BOULDERING_ZOMBIE_SPAWN_EGG, "Bouldering Zombie Spawn Egg");
+        translationBuilder.add(GraysModItems.ECHO_VIAL, "Echo Vial");
         translationBuilder.add(GraysModItems.CLUCKSHROOM_SPAWN_EGG, "Cluckshroom Spawn Egg");
         translationBuilder.add(GraysModItems.HOT_POCKET, "Hot Pocket");
         translationBuilder.add(GraysModItems.MAKESHIFT_WINGS, "Makeshift Wings");
+        translationBuilder.add(GraysModItems.PEARL, "Pearl");
         translationBuilder.add(GraysModItems.PIGLIN_WAR_AXE, "Piglin War Axe");
         translationBuilder.add(GraysModItems.PRISMARINE_AXE, "Prismarine Axe");
         translationBuilder.add(GraysModItems.PRISMARINE_HOE, "Prismarine Hoe");
@@ -35,6 +37,10 @@ public class GraysModLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(GraysModItems.TURTLE_SHELL, "Turtle Shell");
         translationBuilder.add(GraysModItems.TURTLE_SHOES, "Turtle Shoes");
         translationBuilder.add(GraysModItems.TURTLE_TROUSERS, "Turtle Trousers");
+        translationBuilder.add(GraysModItems.VIAL_OF_RECOLLECTION, "Vial of Recollection");
+        translationBuilder.add(GraysModItems.VIAL_OF_SHADOWS, "Vial of Shadows");
+        translationBuilder.add(GraysModItems.VIAL_OF_TITANS, "Vial of Titans");
+        translationBuilder.add(GraysModItems.WIND_BOLT, "Wind Bolt");
 
         translationBuilder.add(GraysModBlocks.KILN, "Kiln");
         translationBuilder.add(GraysModBlocks.PRISMARINE_WORKBENCH, "Prismarine Workbench");
@@ -43,10 +49,13 @@ public class GraysModLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(GraysModItemGroups.GRAYSMOD, "GraysMod");
 
         translationBuilder.add("effect.graysmod.magma_speed", "Magma Speed");
+        translationBuilder.add("effect.graysmod.shadow_form", "Shadow Form");
+        translationBuilder.add("effect.graysmod.titan_form", "Titan Form");
 
         translationBuilder.add(GraysModEntityTypes.BALL_OF_REPULSION_GEL, "Ball of Repulsion Gel");
         translationBuilder.add(GraysModEntityTypes.BOULDERING_ZOMBIE, "Bouldering Zombie");
         translationBuilder.add(GraysModEntityTypes.CLUCKSHROOM, "Cluckshroom");
+        translationBuilder.add(GraysModEntityTypes.WIND_BOLT, "Wind Bolt");
 
         translationBuilder.add("container.kiln", "Kiln");
         translationBuilder.add("gui.recipebook.toggleRecipes.fireable", "Showing Fireable");
@@ -66,5 +75,9 @@ public class GraysModLanguageProvider extends FabricLanguageProvider {
 
         translationBuilder.add("subtitles.entity.ball_of_gel.throw", "Ball of Gel flies");
         translationBuilder.add("subtitles.entity.bouldering_zombie.ambient_climb", "Bouldering Zombie climbs");
+        translationBuilder.add("subtitles.entity.wind_bolt.wind_burst", "Wind Bolt bursts");
+        translationBuilder.add("subtitles.item.vial.dispose", "Vial breaks");
+
+        translationBuilder.add("tag.item.graysmod.vials", "Vials");
     }
 }

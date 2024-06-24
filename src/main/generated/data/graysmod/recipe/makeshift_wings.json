@@ -2,20 +2,20 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "key": {
-    "f": {
+    "F": {
       "item": "minecraft:feather"
     },
-    "h": {
+    "H": {
       "item": "minecraft:honeycomb"
     },
-    "l": {
+    "L": {
       "item": "minecraft:leather"
     }
   },
   "pattern": [
-    "hlh",
-    "fhf",
-    "f f"
+    "HLH",
+    "FHF",
+    "F F"
   ],
   "result": {
     "count": 1,

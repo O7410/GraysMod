@@ -1,6 +1,6 @@
 package graysblock.graysmod.block;
 
-import graysblock.graysmod.client.gui.screen.PrismarineWorkbenchScreenHandler;
+import graysblock.graysmod.screen.PrismarineWorkbenchScreenHandler;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.CraftingTableBlock;
 import net.minecraft.screen.NamedScreenHandlerFactory;

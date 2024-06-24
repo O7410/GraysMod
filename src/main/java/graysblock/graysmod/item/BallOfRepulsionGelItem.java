@@ -1,6 +1,6 @@
 package graysblock.graysmod.item;
 
-import graysblock.graysmod.entity.projectile.thrown.BallOfRepulsionGelEntity;
+import graysblock.graysmod.entity.custom.BallOfRepulsionGelEntity;
 import graysblock.graysmod.sound.GraysModSoundEvents;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -30,13 +30,13 @@ public class BallOfRepulsionGelItem extends Item {
                 0.4F / (world.getRandom().nextFloat() * 0.4F + 0.8F)
         );
 
-        if(!world.isClient) {
+        if (!world.isClient) {
             BallOfRepulsionGelEntity repulsionGelEntity = new BallOfRepulsionGelEntity(world, user);
             repulsionGelEntity.setItem(itemStack);
             repulsionGelEntity.setVelocity(user, user.getPitch(), user.getYaw(), 0.0F, 1.5F, 1.0F);
             world.spawnEntity(repulsionGelEntity);
 
-            if(!user.getAbilities().creativeMode) {
+            if (!user.getAbilities().creativeMode) {
                 itemStack.decrement(1);
             }
         }

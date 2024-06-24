@@ -3,7 +3,7 @@ package graysblock.graysmod.client.render.entity;
 import graysblock.graysmod.GraysMod;
 import graysblock.graysmod.client.render.entity.model.CluckshroomEntityModel;
 import graysblock.graysmod.client.render.entity.model.GraysModEntityModelLayers;
-import graysblock.graysmod.entity.passive.CluckshroomEntity;
+import graysblock.graysmod.entity.custom.CluckshroomEntity;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.render.entity.EntityRendererFactory;

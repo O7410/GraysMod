@@ -2,11 +2,11 @@ package graysblock.graysmod;
 
 import graysblock.graysmod.block.GraysModBlocks;
 import graysblock.graysmod.block.entity.GraysModBlockEntityTypes;
-import graysblock.graysmod.client.gui.screen.GraysModScreenHandlerTypes;
+import graysblock.graysmod.screen.GraysModScreenHandlerTypes;
 import graysblock.graysmod.entity.GraysModEntityTypes;
-import graysblock.graysmod.entity.effect.GraysModStatusEffects;
-import graysblock.graysmod.entity.mob.BoulderingZombieEntity;
-import graysblock.graysmod.entity.passive.CluckshroomEntity;
+import graysblock.graysmod.effect.GraysModStatusEffects;
+import graysblock.graysmod.entity.custom.BoulderingZombieEntity;
+import graysblock.graysmod.entity.custom.CluckshroomEntity;
 import graysblock.graysmod.item.GraysModItemGroups;
 import graysblock.graysmod.item.GraysModItems;
 import graysblock.graysmod.recipe.GraysModRecipeSerializers;
@@ -40,4 +40,7 @@ public class GraysMod implements ModInitializer {
 
     }
 
+	/*
+	 * TODO: Fix "Shadow" status effect to let you pass through blocks in the "SHADOW_FORM_PASSES_THROUGH" tag.
+	 */
 }

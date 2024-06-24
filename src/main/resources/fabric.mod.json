@@ -19,7 +19,7 @@
 			"graysblock.graysmod.GraysMod"
 		],
 		"client": [
-			"graysblock.graysmod.client.GraysModClient"
+			"graysblock.graysmod.GraysModClient"
 		],
 		"fabric-datagen": [
 			"graysblock.graysmod.data.GraysModDataGenerator"
